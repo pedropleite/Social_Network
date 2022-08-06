@@ -1,0 +1,42 @@
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+
+const LinkList = styled.ul`
+    display: flex;
+    list-style: none;
+    flex-flow: row nowrap;
+
+    li {
+        margin-right: 1em;
+    }
+
+    a {
+        padding: 0.4em 0.6em;
+    }
+
+    @media (max-width: 768px) {
+        flex-flow: column nowrap;
+        background-color: #0d2538;
+        position: fixed;
+        transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 40%;
+        padding-top: 3.5rem;
+        transition: transform 0.3s ease-in-out;
+        li {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+    }
+`;
+
+const StyledNavLink = styled(NavLink)`
+    &.active {
+        background-color: ${(props) => props.theme.activeBackground};
+        color: ${(props) => props.theme.activeFontColor};
+    }
+`;
+
+export { LinkList, StyledNavLink };

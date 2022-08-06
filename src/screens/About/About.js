@@ -1,0 +1,23 @@
+import { Container } from '../../globalStyles';
+import { Btn } from './styles';
+
+const About = () => {
+    return (
+        <Container>
+            <div style={{ flexDirection: 'column' }}>
+                <h2>
+                    About the Real <span>Social</span>
+                </h2>
+                <p>This project consists of a blog ( CRUD ) made with React in Front-End and Firebase as database. </p>
+                <p style={{ fontWeight: '600' }}>
+                    If you liked it, don't forget to visit my Linkedin and GitHub to know more about what I do, thank
+                    you.
+                </p>
+                <Btn style={{ background: '#161b22' }}>Linkedin</Btn>
+                <Btn style={{ background: '#0a66c2' }}>GitHub</Btn>
+            </div>
+        </Container>
+    );
+};
+
+export default About;
