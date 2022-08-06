@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Social Network 🍱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width ="100%" src="https://github.com/pedropleite/Order-App/blob/master/READMEGif.gif">
+<br>
 
-## Available Scripts
+# PT-BR
 
-In the project directory, you can run:
+# Sobre esse projeto 🔍
+<p>CRUD construido em ReactJS usando o Firebase como banco de dados para facilitar a autenticação e armazenamento de dados, além do auxílio de ferramentas como o Context API para uma melhor administração do estado e propriedades, Styled-Components para uma estilização mais prática usando JavaScript, Axios para requisições HTTP e React-Router para criação de rotas.</p>
+<br>
+<p>A aplicação consiste em um CRUD(criação, consulta, atualização e destruição de dados) simulando uma rede social. Nela é possível a criação de usuários, a criação de posts inteiramente personalizável, possui uma Home que mostra os posts criados em ordem de criação (similar ao que o Instagram faz), há também um dashboard com os seus posts para te permitir editá-los ou exclui-los conforme queira, há dois modos de brilho, o dark e o light, facilitando assim para quem possui alguma sensibilidade à luz e também uma barra de pesquisa para facilitar a experiência do usuário para caso ela queira ver um post em específico.</p>
+<br> 
+<p>Essa aplicação foi pensada para realmente se parecer com uma rede social, permitindo os usuários criarem posts sobre o seu dia a dia e interagirem com os seus colegas.</p>
+<br> 
 
-### `npm start`
+# Tecnologias utilizadas 💻
+- <a href="https://www.javascript.com/">JavaScript</a>
+- <a href="https://pt-br.reactjs.org/">ReactJS</a>
+- <a href="https://styled-components.com/">Styled-Components</a>
+- <a href="https://axios-http.com/ptbr/docs/intro">Axios</a>
+- <a href="https://v5.reactrouter.com/web/guides/quick-start">React-Router</a>
+- <a href="https://pt-br.reactjs.org/docs/context.html">Context-API</a>
+- <a href="https://www.framer.com/motion/">Framer-Motion</a>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Features 🕹
+- [x] Sistema de autenticação completo no Front-End com mensagens responsivas ao seu erro, facilitando o entendimento do usuário.
+- [x] Home com a amostragem de todos os posts já criados em ordem de criação, facilitando assim o usuário saber quais foram os últimos.
+- [x] Sistema de criação de posts totalmente personalizável, incluindo título, conteúdo, imagem e etc.
+- [x] Barra de pesquisa de posts para facilitar caso o usuário queira procurar por algum em específico.
+- [x] Dashboard com todos os posts criados pelo usuário permitindo o mesmo ver quais foram eles, editá-los como quiser e também deletá-los.
+- [x] Sistema de temas dark e light para permitir que o usuário opte pelo que melhor atende-lo.
+<br><br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Status do projeto 📌
+- Finalizado 🛠
+<br>
+<br>
+<br>
+<br>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# EN-US
 
-### `npm run build`
+# About This Project 🔍
+<p>CRUD built in ReactJS using Firebase as a database to facilitate authentication and data storage, in addition to the help of tools such as the Context API for better state and property management, Styled-Components for a more practical styling using JavaScript, Axios for HTTP requests and React-Router for creating routes </p>
+<br>
+<p>
+The application consists of a CRUD (data creation, query, update and destruction) simulating a social network. It is possible to create users, create fully customizable posts, it has a Home that shows the posts created in order of creation (similar to what Instagram does), there is also a dashboard with your posts to allow you to edit them or delete them as you wish, there are two brightness modes, dark and light, making it easier for those who have some sensitivity to light and also a search bar to facilitate the user experience in case she wants to see a specific post.</p>
+<br> 
+<p>This application was designed to really look like a social network, allowing users to create posts about their daily lives and interact with their colleagues.</p>
+<br> 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Technologies Used 💻
+- <a href="https://www.javascript.com/">JavaScript</a>
+- <a href="https://pt-br.reactjs.org/">ReactJS</a>
+- <a href="https://styled-components.com/">Styled-Components</a>
+- <a href="https://axios-http.com/ptbr/docs/intro">Axios</a>
+- <a href="https://v5.reactrouter.com/web/guides/quick-start">React-Router</a>
+- <a href="https://pt-br.reactjs.org/docs/context.html">Context-API</a>
+- <a href="https://www.framer.com/motion/">Framer-Motion</a>
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Features 🕹
+- [x] Complete Front-End authentication system with responsive messages to your error, making it easier for the user to understand.
+- [x] Home with the sampling of all posts already created in order of creation, thus making it easier for the user to know which were the last ones.
+- [x] Fully customizable post creation system, including title, content, image, etc.
+- [x] Post search bar to make it easier if the user wants to search for a specific one.
+- [x] Dashboard with all the posts created by the user allowing the user to see what they were, edit them as they wish and also delete them.
+- [x] System of dark and light themes to allow the user to choose the one that best suits him.
+<br><br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Project status 📌
+- Finished 🛠
 
-### `npm run eject`
+##
+ <br><div align="center"> 
+   <a href="https://instagram.com/pedropml" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+   <a href = "mailto:pedroaksson@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+   <a href="https://www.linkedin.com/in/pedro-paulo-361143226/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+ </div>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
