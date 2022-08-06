@@ -1,4 +1,4 @@
-# Social Network 🍱
+# Social Network 📱
 
 <img width ="100%" src="https://github.com/pedropleite/Order-App/blob/master/READMEGif.gif">
 <br>
