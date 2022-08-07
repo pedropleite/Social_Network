@@ -15,7 +15,7 @@ const SearchForm = styled.form`
     align-items: center;
 
     input {
-        max-width: 80%;
+        max-width: 66%;
         width: 600px;
         height: 2.6rem;
         padding-left: 25px;
