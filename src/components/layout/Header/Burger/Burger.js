@@ -6,7 +6,7 @@ const Burger = () => {
     const [open, setOpen] = useState(false);
 
     const handleModal = () => {
-        setOpen((prev) => !prev);
+        setOpen(!open);
     };
 
     return (

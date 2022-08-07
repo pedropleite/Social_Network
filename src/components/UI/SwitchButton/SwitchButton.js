@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Container, Handle, Icon } from './styles';
 
 const SwitchButton = (props) => {
     const [isOn, setIsOn] = useState(false);
 
     const handleClick = () => {
-        setIsOn(!isOn);
+        setIsOn((prev) => !prev);
         props.themeToggle();
     };
 
     return (
         <Container onClick={() => handleClick()} style={{ justifyContent: isOn ? 'flex-end' : 'flex-start' }}>
-            <Handle layout className="handle">
+            <Handle layout>
                 <AnimatePresence exitBeforeEnter initial={false}>
                     <Icon
                         initial={{ y: -30, opacity: 0 }}

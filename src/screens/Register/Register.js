@@ -96,7 +96,7 @@ const Register = () => {
                     {error && <Error>{error}</Error>}
                 </form>
                 <section>
-                    <img src={formSignImg2} />
+                    <img src={formSignImg2} alt="Registered" />
                 </section>
             </div>
         </Container>

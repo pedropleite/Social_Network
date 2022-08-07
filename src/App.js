@@ -11,6 +11,13 @@ import { Navbar } from './components/layout/Header/Navbar/Navbar';
 import { Footer } from './components/layout/Footer/Footer';
 import Paths from './routes';
 
+const Container = styled.div`
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
 function App() {
     const [theme, setTheme] = useState('light');
 
@@ -22,27 +29,15 @@ function App() {
     const { auth } = useAuthentication();
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            setUser(user);
-        });
+        onAuthStateChanged(auth, (user) => setUser(user));
     }, [auth]);
-
-    if (user === undefined) {
-        return <p>Loading...</p>;
-    }
-
-    const Container = styled.div`
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    `;
 
     return (
         <AuthProvider value={{ user }}>
             <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
                 <Container>
                     <Navbar themeToggle={themeToggle} />
+                    {user === undefined && <p>Loading...</p>}
                     <Paths />
                     <Footer />
                     <GlobalStyle />
