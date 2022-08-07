@@ -13,8 +13,12 @@ const About = () => {
                     If you liked it, don't forget to visit my Linkedin and GitHub to know more about what I do, thank
                     you.
                 </p>
-                <Btn style={{ background: '#161b22' }}>Linkedin</Btn>
-                <Btn style={{ background: '#0a66c2' }}>GitHub</Btn>
+                <Btn style={{ background: '#161b22' }} href="https://www.linkedin.com/in/pedro-paulo-leite/">
+                    Linkedin
+                </Btn>
+                <Btn style={{ background: '#0a66c2' }} href="https://github.com/pedropleite">
+                    GitHub
+                </Btn>
             </div>
         </Container>
     );

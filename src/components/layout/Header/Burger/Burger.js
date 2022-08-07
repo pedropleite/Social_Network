@@ -5,14 +5,18 @@ import RightNav from '../RightNav/RightNav';
 const Burger = () => {
     const [open, setOpen] = useState(false);
 
+    const handleModal = () => {
+        setOpen((prev) => !prev);
+    };
+
     return (
         <>
-            <StyledBurger open={open} onClick={() => setOpen(!open)} style={{ position: open === true ? 'fixed' : 'absolute' }}>
+            <StyledBurger open={open} onClick={handleModal} style={{ position: open === true ? 'fixed' : 'absolute' }}>
                 <div />
                 <div />
                 <div />
             </StyledBurger>
-            <RightNav open={open} />
+            <RightNav open={open} handleModal={handleModal} />
         </>
     );
 };
