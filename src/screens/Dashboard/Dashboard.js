@@ -44,7 +44,7 @@ const Dashboard = () => {
                                 <div>
                                     <span>{post.title}</span>
                                     <div>
-                                        <BtnEdit to={`/posts/${post.id}`}>Read</BtnEdit>
+                                        <BtnEdit to={`/posts?q=${post.id}`}>Read</BtnEdit>
                                         <BtnEdit to={`/posts/edit?q=${post.id}`}>Edit</BtnEdit>
                                         <button onClick={() => deletePost(post.idPost, post.id)}>
                                             {response.loading ? 'Loading' : 'Delete'}
