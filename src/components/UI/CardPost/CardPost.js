@@ -4,7 +4,7 @@ const CardPost = ({ post }) => {
     return (
         <Container>
             <Title>{post.title}</Title>
-            <img src={post.linkImage} />
+            <img src={post.linkImage} alt={post.title} />
             <ContainerContent>
                 <ContainerDescription>
                     <div>
