@@ -3,37 +3,49 @@ import { LinkList, StyledNavLink } from './styles';
 import useAuthentication from '../../../../hooks/useAuthentication';
 import { useAuthValue } from '../../../../context/AuthContext';
 
-const RightNav = ({ open }) => {
+const RightNav = (props) => {
     const { user } = useAuthValue();
     const { logout } = useAuthentication();
 
     return (
-        <LinkList open={open}>
+        <LinkList open={props.open}>
             <li>
-                <StyledNavLink to="/">Home</StyledNavLink>
+                <StyledNavLink to="/" onClick={props.handleModal}>
+                    Home
+                </StyledNavLink>
             </li>
             {!user && (
                 <>
                     <li>
-                        <StyledNavLink to="/login">Login</StyledNavLink>
+                        <StyledNavLink to="/login" onClick={props.handleModal}>
+                            Login
+                        </StyledNavLink>
                     </li>
                     <li>
-                        <StyledNavLink to="/Register">Register</StyledNavLink>
+                        <StyledNavLink to="/Register" onClick={props.handleModal}>
+                            Register
+                        </StyledNavLink>
                     </li>
                 </>
             )}
             {user && (
                 <>
                     <li>
-                        <StyledNavLink to="/posts/create">New Post</StyledNavLink>
+                        <StyledNavLink to="/posts/create" onClick={props.handleModal}>
+                            New Post
+                        </StyledNavLink>
                     </li>
                     <li>
-                        <StyledNavLink to="/dashboard">Dashboard</StyledNavLink>
+                        <StyledNavLink to="/dashboard" onClick={props.handleModal}>
+                            Dashboard
+                        </StyledNavLink>
                     </li>
                 </>
             )}
             <li>
-                <StyledNavLink to="/about">About</StyledNavLink>
+                <StyledNavLink to="/about" onClick={props.handleModal}>
+                    About
+                </StyledNavLink>
             </li>
             {user && (
                 <li>

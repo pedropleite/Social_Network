@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-const Btn = styled.button`
+const Btn = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0.8rem;
     font-size: 1.5rem;
     font-weight: 600;
@@ -15,7 +18,8 @@ const Btn = styled.button`
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        color: #000;
     }
 `;
 
