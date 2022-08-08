@@ -26,6 +26,7 @@
 
 # Features 🕹
 - [x] Sistema de autenticação completo no Front-End com mensagens responsivas ao seu erro, facilitando o entendimento do usuário.
+- [x] Sistema de login e registro usando a API do Firebase.
 - [x] Home com a amostragem de todos os posts já criados em ordem de criação, facilitando assim o usuário saber quais foram os últimos.
 - [x] Sistema de criação de posts totalmente personalizável, incluindo título, conteúdo, imagem e etc.
 - [x] Barra de pesquisa de posts para facilitar caso o usuário queira procurar por algum em específico.
@@ -64,6 +65,7 @@ The application consists of a CRUD (data creation, query, update and destruction
 
 # Features 🕹
 - [x] Complete Front-End authentication system with responsive messages to your error, making it easier for the user to understand.
+- [x] Login and registration system using Firebase API.
 - [x] Home with the sampling of all posts already created in order of creation, thus making it easier for the user to know which were the last ones.
 - [x] Fully customizable post creation system, including title, content, image, etc.
 - [x] Post search bar to make it easier if the user wants to search for a specific one.
