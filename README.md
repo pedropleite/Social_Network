@@ -1,6 +1,6 @@
 # Social Network 📱
 
-<img width ="100%" src="https://github.com/pedropleite/Order-App/blob/master/READMEGif.gif">
+<img width ="100%" src="https://github.com/pedropleite/Social_Network/blob/main/READMEGif.gif">
 <br>
 
 # PT-BR
