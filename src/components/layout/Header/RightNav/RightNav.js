@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinkList, StyledNavLink } from './styles';
+import { LinkList, StyledNavLink, LogoutBtn } from './styles';
 import useAuthentication from '../../../../hooks/useAuthentication';
 import { useAuthValue } from '../../../../context/AuthContext';
 
@@ -49,7 +49,7 @@ const RightNav = (props) => {
             </li>
             {user && (
                 <li>
-                    <button onClick={logout}>Logout</button>
+                    <LogoutBtn onClick={logout}>Logout</LogoutBtn>
                 </li>
             )}
         </LinkList>
