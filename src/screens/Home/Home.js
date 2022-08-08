@@ -27,7 +27,6 @@ const Home = () => {
                 </SearchForm>
             </ContainerSearch>
             <ContainerPosts>
-                {loading && <p>Loading...</p>}
                 {error && <p>{error}</p>}
                 {posts && posts.map((post) => <CardPost post={post} key={post.title}></CardPost>)}
                 {!loading && posts && posts.length === 0 && (
@@ -37,6 +36,7 @@ const Home = () => {
                     </div>
                 )}
             </ContainerPosts>
+            {loading && <p>Loading...</p>}
         </Container>
     );
 };
