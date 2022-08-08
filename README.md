@@ -1,11 +1,13 @@
 # Social Network 📱
+<br>
 
+## Video da aplicação | Application video:
 <img width ="100%" src="https://github.com/pedropleite/Social_Network/blob/main/READMEGif.gif">
 <br>
 
 # PT-BR
 
-# Sobre esse projeto 🔍
+## Sobre esse projeto 🔍
 <p>Link para a aplicação: https://social-networkp.netlify.app/</p>
 
 
@@ -16,7 +18,7 @@
 <p>Essa aplicação foi pensada para realmente se parecer com uma rede social, permitindo os usuários criarem posts sobre o seu dia a dia e interagirem com os seus colegas.</p>
 <br> 
 
-# Tecnologias utilizadas 💻
+## Tecnologias utilizadas 💻
 - <a href="https://www.javascript.com/">JavaScript</a>
 - <a href="https://pt-br.reactjs.org/">ReactJS</a>
 - <a href="https://styled-components.com/">Styled-Components</a>
@@ -27,7 +29,7 @@
 - <a href="https://firebase.google.com/">Firebase</a>
 <br>
 
-# Features 🕹
+## Features 🕹
 - [x] Sistema de autenticação completo no Front-End com mensagens responsivas ao seu erro, facilitando o entendimento do usuário.
 - [x] Sistema de login e registro usando a API do Firebase.
 - [x] Home com a amostragem de todos os posts já criados em ordem de criação, facilitando assim o usuário saber quais foram os últimos.
@@ -37,7 +39,7 @@
 - [x] Sistema de temas Dark/Light com o framer-motion para a animação, permitindo assim o usuário decidir pelo tema que melhor o atenda.
 <br><br>
 
-# Status do projeto 📌
+## Status do projeto 📌
 - Em construção( Ainda será adicionado features como a adição de comentários e curtidas ).
 <br>
 <br>
@@ -47,7 +49,7 @@
 
 # EN-US
 
-# About This Project 🔍
+## About This Project 🔍
 <p>Link to the application: https://social-networkp.netlify.app/</p>
 
 <p>CRUD built in ReactJS using Firebase as a database to facilitate authentication and data storage, in addition to the help of tools such as the Context API for better state and property management, Styled-Components for a more practical styling using JavaScript, Axios for HTTP requests and React-Router for creating routes </p>
@@ -58,7 +60,7 @@ The application consists of a CRUD (data creation, query, update and destruction
 <p>This application was designed to really look like a social network, allowing users to create posts about their daily lives and interact with their colleagues.</p>
 <br> 
 
-# Technologies Used 💻
+## Technologies Used 💻
 - <a href="https://www.javascript.com/">JavaScript</a>
 - <a href="https://pt-br.reactjs.org/">ReactJS</a>
 - <a href="https://styled-components.com/">Styled-Components</a>
@@ -68,7 +70,7 @@ The application consists of a CRUD (data creation, query, update and destruction
 - <a href="https://www.framer.com/motion/">Framer-Motion</a>
 <br>
 
-# Features 🕹
+## Features 🕹
 - [x] Complete Front-End authentication system with responsive messages to your error, making it easier for the user to understand.
 - [x] Login and registration system using Firebase API.
 - [x] Home with the sampling of all posts already created in order of creation, thus making it easier for the user to know which were the last ones.
@@ -78,10 +80,10 @@ The application consists of a CRUD (data creation, query, update and destruction
 - [x] Dark/Light theme system with framer-motion for animation, thus allowing the user to decide on the theme that best suits him.
 <br><br>
 
-# Project status 📌
+## Project status 📌
 - Under construction (Features such as adding comments and likes will still be added).
 
-##
+#
  <br><div align="center"> 
    <a href="https://instagram.com/pedropml" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
    <a href = "mailto:pedroaksson@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
