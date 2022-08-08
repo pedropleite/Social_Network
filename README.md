@@ -31,7 +31,7 @@
 - [x] Sistema de criação de posts totalmente personalizável, incluindo título, conteúdo, imagem e etc.
 - [x] Barra de pesquisa de posts para facilitar caso o usuário queira procurar por algum em específico.
 - [x] Dashboard com todos os posts criados pelo usuário permitindo o mesmo ver quais foram eles, editá-los como quiser e também deletá-los.
-- [x] Sistema de temas dark e light para permitir que o usuário opte pelo que melhor atende-lo.
+- [x] Sistema de temas Dark/Light com o framer-motion para a animação, permitindo assim o usuário decidir pelo tema que melhor o atenda.
 <br><br>
 
 # Status do projeto 📌
@@ -70,7 +70,7 @@ The application consists of a CRUD (data creation, query, update and destruction
 - [x] Fully customizable post creation system, including title, content, image, etc.
 - [x] Post search bar to make it easier if the user wants to search for a specific one.
 - [x] Dashboard with all the posts created by the user allowing the user to see what they were, edit them as they wish and also delete them.
-- [x] System of dark and light themes to allow the user to choose the one that best suits him.
+- [x] Dark/Light theme system with framer-motion for animation, thus allowing the user to decide on the theme that best suits him.
 <br><br>
 
 # Project status 📌
