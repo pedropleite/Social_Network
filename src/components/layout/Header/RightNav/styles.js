@@ -37,6 +37,20 @@ const StyledNavLink = styled(NavLink)`
         background-color: ${(props) => props.theme.activeBackground};
         color: ${(props) => props.theme.activeFontColor};
     }
+    @media (max-width: 768px) {
+        color: #fff;
+
+        &.active {
+            background-color: #fff;
+            color: #000;
+        }
+    }
 `;
 
-export { LinkList, StyledNavLink };
+const LogoutBtn = styled.button`
+    @media (max-width: 768px) {
+        color: #fff;
+    }
+`;
+
+export { LinkList, StyledNavLink, LogoutBtn };
