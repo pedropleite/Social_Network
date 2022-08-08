@@ -33,7 +33,7 @@
 <br><br>
 
 # Status do projeto 📌
-- Finalizado 🛠
+- Em construção( Ainda será adicionado features como a adição de comentários e curtidas ).
 <br>
 <br>
 <br>
@@ -71,7 +71,7 @@ The application consists of a CRUD (data creation, query, update and destruction
 <br><br>
 
 # Project status 📌
-- Finished 🛠
+- Under construction (Features such as adding comments and likes will still be added).
 
 ##
  <br><div align="center"> 
