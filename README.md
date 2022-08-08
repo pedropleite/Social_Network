@@ -21,6 +21,7 @@
 - <a href="https://v5.reactrouter.com/web/guides/quick-start">React-Router</a>
 - <a href="https://pt-br.reactjs.org/docs/context.html">Context-API</a>
 - <a href="https://www.framer.com/motion/">Framer-Motion</a>
+- <a href="https://firebase.google.com/">Firebase</a>
 <br>
 
 # Features 🕹
