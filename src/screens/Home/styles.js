@@ -7,17 +7,20 @@ const ContainerSearch = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 `;
 
 const SearchForm = styled.form`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 2.6rem;
+    width: 720px;
+    max-width: 86%;
 
     input {
-        max-width: 66%;
         width: 600px;
-        height: 2.6rem;
+        height: 100%;
         padding-left: 25px;
         font-size: 1.2rem;
         border-top-left-radius: 10px;
@@ -26,9 +29,8 @@ const SearchForm = styled.form`
     }
 
     button {
-        max-width: 20%;
         width: 120px;
-        height: 2.6rem;
+        height: 100%;
         background-color: #0a66c2;
         color: #fff;
         font-size: 1.2rem;
