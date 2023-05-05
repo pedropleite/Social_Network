@@ -40,7 +40,7 @@
 <br><br>
 
 ## Status do projeto 📌
-- Ainda em atualização, será adicionado novas features como:
+- Ainda em atualização. Será adicionado novas features, como:
 - [x] Sistema de like nos posts.
 - [x] Renovação do estilo da página.
 - [x] Sistema de edição do perfil, dando a possibilidade do usuário adicionar uma foto no perfil e mais informações.
