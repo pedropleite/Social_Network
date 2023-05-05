@@ -40,7 +40,11 @@
 <br><br>
 
 ## Status do projeto 📌
-- Em construção( Ainda será adicionado features como a adição de comentários e curtidas ).
+- Ainda em atualização, será adicionado novas features como:
+- [x] Sistema de like nos posts.
+- [x] Renovação do estilo da página.
+- [x] Sistema de edição do perfil, dando a possibilidade do usuário adicionar uma foto no perfil e mais informações.
+- [x] Migração do Context API para Redux.
 <br>
 <br>
 <br>
