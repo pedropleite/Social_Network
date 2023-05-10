@@ -1,6 +1,6 @@
 import useFetch from '../../hooks/useFetch';
 import useQuery from '../../hooks/useQuery';
-import CardPost from '../../components/UI/CardPost/CardPost';
+import CardPost from '../../components/CardPost';
 import { Container, ContainerResult, Btn } from './styles';
 
 const Search = () => {

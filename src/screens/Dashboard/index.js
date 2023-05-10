@@ -9,7 +9,7 @@ import {
     BtnEdit,
 } from './styles';
 
-import { useAuthValue } from '../../context/AuthContext';
+import { useAuthValue } from '../../store/AuthContext';
 import useFetch from '../../hooks/useFetch';
 import useDelete from '../../hooks/useDelete';
 

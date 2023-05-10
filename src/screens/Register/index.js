@@ -1,5 +1,5 @@
 import formSignImg2 from '../../assets/ilustration/formSignUp2.jpg';
-import { Container, Error } from '../../globalStyles';
+import { Container, Error } from '../../styles/Components';
 import { useState, useEffect } from 'react';
 import useAuthentication from '../../hooks/useAuthentication';
 

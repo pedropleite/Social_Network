@@ -1,7 +1,7 @@
 import React from 'react';
 import { LinkList, StyledNavLink, LogoutBtn } from './styles';
-import useAuthentication from '../../../../hooks/useAuthentication';
-import { useAuthValue } from '../../../../context/AuthContext';
+import useAuthentication from '../../../hooks/useAuthentication';
+import { useAuthValue } from '../../../store/AuthContext';
 
 const RightNav = (props) => {
     const { user } = useAuthValue();

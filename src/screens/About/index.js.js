@@ -1,4 +1,4 @@
-import { Container } from '../../globalStyles';
+import { Container } from '../../styles/Components';
 import { Btn } from './styles';
 
 const About = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import Burger from '../Burger/Burger';
+import Burger from '../Burger';
 import { Container, Brand, ContainerSection } from './styles';
 import { NavLink } from 'react-router-dom';
-import SwitchButton from '../../../UI/SwitchButton/SwitchButton';
+import SwitchButton from '../../SwitchButton/';
 
 export const Navbar = (props) => {
     return (

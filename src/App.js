@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import useAuthentication from './hooks/useAuthentication';
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './store/AuthContext';
 import { onAuthStateChanged } from 'firebase/auth';
 
 import styled, { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './themes';
-import { GlobalStyle } from './globalStyles';
+import { lightTheme, darkTheme } from './styles/Themes';
+import { GlobalStyle } from './styles/GlobalStyles';
 
-import { Navbar } from './components/layout/Header/Navbar/Navbar';
-import { Footer } from './components/layout/Footer/Footer';
+import { Navbar } from './components/Header/Navbar/';
+import { Footer } from './components/Footer/';
 import Paths from './routes';
 
 const Container = styled.div`

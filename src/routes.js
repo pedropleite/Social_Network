@@ -1,14 +1,14 @@
-import Home from './screens/Home/Home';
-import About from './screens/About/About';
-import Login from './screens/Login/Login';
-import Register from './screens/Register/Register';
-import Dashboard from './screens/Dashboard/Dashboard';
-import CreatePost from './screens/CreatePost/CreatePost';
-import Search from './screens/Search/Search';
-import Post from './screens/Post/Post';
-import EditPost from './screens/EditPost/EditPost';
+import Home from './screens/Home';
+import About from './screens/About/index.js';
+import Login from './screens/Login';
+import Register from './screens/Register';
+import Dashboard from './screens/Dashboard';
+import CreatePost from './screens/CreatePost';
+import Search from './screens/Search';
+import Post from './screens/Post';
+import EditPost from './screens/EditPost';
 
-import { useAuthValue } from './context/AuthContext';
+import { useAuthValue } from './store/AuthContext';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 const Paths = () => {

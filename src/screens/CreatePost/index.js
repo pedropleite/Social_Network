@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthValue } from '../../context/AuthContext';
+import { useAuthValue } from '../../store/AuthContext';
 import useInsert from '../../hooks/useInsert';
 
-import { Container, Error } from '../../globalStyles';
+import { Container, Error } from '../../styles/Components';
 import { ContainerCreatePost } from './styles';
 
 const CreatePost = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyledBurger } from './styles';
-import RightNav from '../RightNav/RightNav';
+import RightNav from '../RightNav';
 
 const Burger = () => {
     const [open, setOpen] = useState(false);

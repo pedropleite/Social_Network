@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthValue } from '../../context/AuthContext';
+import { useAuthValue } from '../../store/AuthContext';
 import useUpdate from '../../hooks/useUpdate';
 import useFetch from '../../hooks/useFetch';
 import useQuery from '../../hooks/useQuery';
 
-import { Container, Error } from '../../globalStyles';
+import { Container, Error } from '../../styles/Components';
 import { ContainerCreatePost, TitleImage } from './styles';
 
 const EditPost = () => {

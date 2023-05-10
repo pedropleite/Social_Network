@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import { SearchForm, ContainerSearch, ContainerPosts, BtnLink, Container } from './styles';
 import { useState } from 'react';
-import CardPost from '../../components/UI/CardPost/CardPost';
+import CardPost from '../../components/CardPost';
 
 const Home = () => {
     const [searched, setSearched] = useState('');
