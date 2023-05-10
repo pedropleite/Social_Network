@@ -2,6 +2,7 @@ import useQuery from '../../hooks/useQuery';
 import useFetch from '../../hooks/useFetch';
 
 import { Container, ContainerPost, Btn } from './styles';
+import { LoadingLoop } from '../../components/LoadingLoop';
 
 const Post = () => {
     const id = useQuery().get('q');
@@ -9,7 +10,7 @@ const Post = () => {
     const { document: post, loading } = useFetch('posts', null, null, id);
     return (
         <Container>
-            {loading && <p>Loading...</p>}
+            {loading && <LoadingLoop />}
             {post && (
                 <ContainerPost>
                     <div>

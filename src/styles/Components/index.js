@@ -88,10 +88,14 @@ const Container = styled.div`
     section {
         width: 50%;
         height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-left: 1.5px solid rgba(38, 43, 111, 0.3);
 
         img {
-            width: 80%;
+            max-width: 80%;
+            max-height: 100%;
         }
     }
 
@@ -105,7 +109,7 @@ const Container = styled.div`
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 960px) {
         section {
             display: none;
         }

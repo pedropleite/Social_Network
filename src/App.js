@@ -6,6 +6,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/Themes';
 import { GlobalStyle } from './styles/GlobalStyles';
+import { LoadingLoop } from './components/LoadingLoop';
 
 import { Navbar } from './components/Header/Navbar/';
 import { Footer } from './components/Footer/';
@@ -37,8 +38,7 @@ function App() {
             <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
                 <Container>
                     <Navbar themeToggle={themeToggle} />
-                    {user === undefined && <p>Loading...</p>}
-                    <Paths />
+                    { user === undefined ? <LoadingLoop /> : <Paths /> }
                     <Footer />
                     <GlobalStyle />
                 </Container>
