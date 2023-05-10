@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     const { deletePost, response } = useDelete('posts');
 
-    const { documents: posts, loading } = useFetch('posts', null, uid);
+    const { documents: posts } = useFetch('posts', null, uid);
 
     const handleContent = () => {
         if (posts && posts.length === 0) {
