@@ -1,9 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
-import { SearchForm, ContainerSearch, ContainerPosts, BtnLink, Container } from './styles';
 import { useState } from 'react';
+import useFetch from '../../hooks/useFetch';
+
+import { SearchForm, ContainerSearch, ContainerPosts, BtnLink, Container } from './styles';
 import CardPost from '../../components/CardPost';
 import { LoadingLoop } from '../../components/LoadingLoop';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
     const [searched, setSearched] = useState('');
@@ -22,10 +26,10 @@ const Home = () => {
         <Container hasPosts={posts && posts.length === 0}>
             {!loading && posts && posts.length !== 0 && (
                 <ContainerSearch>
-                    <h1>Recent posts</h1>
+                    <h1>Recent Posts</h1>
                         <SearchForm onSubmit={handleSubmit}>
                             <input type="text" placeholder="Search by tags..." onChange={(e) => setSearched(e.target.value)} />
-                            <button>Search</button>
+                            <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                         </SearchForm>
                 </ContainerSearch>
             )}

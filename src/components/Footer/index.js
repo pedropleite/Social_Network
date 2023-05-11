@@ -1,4 +1,4 @@
-import { ContainerFooter, Icons } from './styles';
+import { ContainerFooter, Icons, Brand } from './styles';
 import IconFacebook from '../../assets/icons/facebook.png';
 import IconInstagram from '../../assets/icons/instagram.png';
 import IconTwitter from '../../assets/icons/twitter.png';
@@ -8,6 +8,9 @@ export const Footer = () => {
     return (
         <ContainerFooter>
             <h3>Write about what you are interested in</h3>
+            <Brand>
+                So<div>c</div>ial
+            </Brand>
             <Icons>
                 <img src={IconFacebook} alt="Facebook" />
                 <img src={IconInstagram} alt="Instagram" />

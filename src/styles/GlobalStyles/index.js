@@ -2,8 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
-    padding: 0;
+    height: 100%;
     background: ${(props) => props.theme.backgroundBody};
     background: ${(props) => props.theme.bodyBackground};
     font-family: 'Montserrat', sans-serif;

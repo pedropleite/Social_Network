@@ -29,7 +29,7 @@ const SearchForm = styled.form`
     }
 
     button {
-        width: 120px;
+        width: 90px;
         height: 100%;
         background-color: #0a66c2;
         color: #fff;

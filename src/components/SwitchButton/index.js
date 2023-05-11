@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { Container, Handle, Icon } from './styles';
+import { Container, Handle } from './styles';
 
 const SwitchButton = (props) => {
     const [isOn, setIsOn] = useState(false);
@@ -10,18 +9,15 @@ const SwitchButton = (props) => {
         props.themeToggle();
     };
 
+    const spring = {
+        type: "spring",
+        stiffness: 300,
+        damping: 30
+    };
+
     return (
-        <Container onClick={() => handleClick()} style={{ justifyContent: isOn ? 'flex-end' : 'flex-start' }}>
-            <Handle layout>
-                <AnimatePresence exitBeforeEnter initial={false}>
-                    <Icon
-                        initial={{ y: -30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: 30, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                    />
-                </AnimatePresence>
-            </Handle>
+        <Container onClick={() => handleClick()} isOn={isOn}>
+            <Handle layout transition={spring}></Handle>
         </Container>
     );
 };

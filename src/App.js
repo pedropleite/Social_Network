@@ -13,7 +13,8 @@ import { Footer } from './components/Footer/';
 import Paths from './routes';
 
 const Container = styled.div`
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
