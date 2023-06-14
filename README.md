@@ -11,6 +11,7 @@
 <p>Link para a aplicação: https://social-networkp.netlify.app/</p>
 
 
+
 <p>CRUD construido em ReactJS usando o Firebase como banco de dados para facilitar a autenticação e armazenamento de dados, além do auxílio de ferramentas como o Context API para uma melhor administração do estado e propriedades, Styled-Components para uma estilização mais prática usando JavaScript, Axios para requisições HTTP e React-Router para criação de rotas.</p>
 <br>
 <p>A aplicação consiste em um CRUD(criação, consulta, atualização e destruição de dados) simulando uma rede social. Nela é possível a criação de usuários, a criação de posts inteiramente personalizável, possui uma Home que mostra os posts criados em ordem de criação (similar ao que o Instagram faz), há também um dashboard com os seus posts para te permitir editá-los ou exclui-los conforme queira, há dois modos de brilho, o dark e o light, facilitando assim para quem possui alguma sensibilidade à luz e também uma barra de pesquisa para facilitar a experiência do usuário para caso ela queira ver um post em específico.</p>
