@@ -2,96 +2,138 @@
 <br>
 
 ## Video da aplicação | Application video:
-<img width ="100%" src="https://github.com/pedropleite/Social_Network/blob/main/READMEGif.gif">
+<img width="100%" src="https://github.com/pedropleite/Social_Network/blob/main/READMEGif.gif">
 <br>
-
 
 # PT-BR
 
-## Sobre esse projeto 🔍
+## 🔍 Sobre o Projeto
 <p>Link para a aplicação: https://social-networkp.netlify.app/</p>
 
 
 <p>CRUD construido em ReactJS usando o Firebase como banco de dados para facilitar a autenticação e armazenamento de dados, além do auxílio de ferramentas como o Context API para uma melhor administração do estado e propriedades, Styled-Components para uma estilização mais prática usando JavaScript, Axios para requisições HTTP e React-Router para criação de rotas.</p>
-<br>
 <p>A aplicação consiste em um CRUD(criação, consulta, atualização e destruição de dados) simulando uma rede social. Nela é possível a criação de usuários, a criação de posts inteiramente personalizável, possui uma Home que mostra os posts criados em ordem de criação (similar ao que o Instagram faz), há também um dashboard com os seus posts para te permitir editá-los ou exclui-los conforme queira, há dois modos de brilho, o dark e o light, facilitando assim para quem possui alguma sensibilidade à luz e também uma barra de pesquisa para facilitar a experiência do usuário para caso ela queira ver um post em específico.</p>
-<br> 
 <p>Essa aplicação foi pensada para realmente se parecer com uma rede social, permitindo os usuários criarem posts sobre o seu dia a dia e interagirem com os seus colegas.</p>
-<br> 
 
-## Tecnologias utilizadas 💻
-- <a href="https://www.javascript.com/">JavaScript</a>
-- <a href="https://pt-br.reactjs.org/">ReactJS</a>
-- <a href="https://styled-components.com/">Styled-Components</a>
-- <a href="https://axios-http.com/ptbr/docs/intro">Axios</a>
-- <a href="https://v5.reactrouter.com/web/guides/quick-start">React-Router</a>
-- <a href="https://pt-br.reactjs.org/docs/context.html">Context-API</a>
-- <a href="https://www.framer.com/motion/">Framer-Motion</a>
-- <a href="https://firebase.google.com/">Firebase</a>
-<br>
+<br/>
 
-## Features 🕹
-- [x] Sistema de autenticação completo no Front-End com mensagens responsivas ao seu erro, facilitando o entendimento do usuário.
-- [x] Sistema de login e registro usando a API do Firebase.
-- [x] Home com a amostragem de todos os posts já criados em ordem de criação, facilitando assim o usuário saber quais foram os últimos.
-- [x] Sistema de criação de posts totalmente personalizável, incluindo título, conteúdo, imagem e etc.
-- [x] Barra de pesquisa de posts para facilitar caso o usuário queira procurar por algum em específico.
-- [x] Dashboard com todos os posts criados pelo usuário permitindo o mesmo ver quais foram eles, editá-los como quiser e também deletá-los.
-- [x] Sistema de temas Dark/Light com o framer-motion para a animação, permitindo assim o usuário decidir pelo tema que melhor o atenda.
-<br><br>
+## ✨ Funcionalidades Principais
 
-## Status do projeto 📌
-- Ainda em atualização. Será adicionado novas features, como:
-- [x] Sistema de like nos posts.
-- [x] Renovação do estilo da página.
-- [x] Sistema de edição do perfil, dando a possibilidade do usuário adicionar uma foto no perfil e mais informações.
-- [x] Migração do Context API para Redux.
-<br>
-<br>
-<br>
-<br>
+### 🔐 Autenticação:
+- **Sistema completo de login e registro**  
+   → Integração completa com Firebase Auth incluindo registro e login.
+- **Mensagens de erro claras e intuitivas**  
+   → Feedback visual para erros comuns como email inválido.
+- **Persistência de sessão**  
+   → Os usuários permanecem logados mesmo após fechar o navegador.
 
+### 📝 Posts:
+- **Criação de posts com texto e imagens**  
+   → Interface simples para criar posts ricos com preview em tempo real.
+- **Dashboard pessoal para gerenciamento de posts**  
+   → Acesso rápido a todos seus posts com opções de edição e exclusão.
+- **Feed organizado cronologicamente**  
+   → Posts exibidos do mais recente para o mais antigo, com carregamento progressivo.
+- **Barra de pesquisa integrada**  
+   → Encontre posts específicos por palavras-chave ou autor.
 
-# EN-US
+### 🎨 Interface:
+- **Tema dark/light com transição animada**  
+   → Troca suave entre modos de cor.
+- **Layout responsivo**  
+   → Experiência otimizada para mobile, tablet e desktop.
 
-## About This Project 🔍
-<p>Link to the application: https://social-networkp.netlify.app/</p>
+<br/>
 
-<p>CRUD built in ReactJS using Firebase as a database to facilitate authentication and data storage, in addition to the help of tools such as the Context API for better state and property management, Styled-Components for a more practical styling using JavaScript, Axios for HTTP requests and React-Router for creating routes </p>
-<br>
-<p>
-The application consists of a CRUD (data creation, query, update and destruction) simulating a social network. It is possible to create users, create fully customizable posts, it has a Home that shows the posts created in order of creation (similar to what Instagram does), there is also a dashboard with your posts to allow you to edit them or delete them as you wish, there are two brightness modes, dark and light, making it easier for those who have some sensitivity to light and also a search bar to facilitate the user experience in case she wants to see a specific post.</p>
-<br> 
-<p>This application was designed to really look like a social network, allowing users to create posts about their daily lives and interact with their colleagues.</p>
-<br> 
+## 🛠 Organização do desenvolvimento
 
-## Technologies Used 💻
-- <a href="https://www.javascript.com/">JavaScript</a>
-- <a href="https://pt-br.reactjs.org/">ReactJS</a>
-- <a href="https://styled-components.com/">Styled-Components</a>
-- <a href="https://axios-http.com/ptbr/docs/intro">Axios</a>
-- <a href="https://v5.reactrouter.com/web/guides/quick-start">React-Router</a>
-- <a href="https://pt-br.reactjs.org/docs/context.html">Context-API</a>
-- <a href="https://www.framer.com/motion/">Framer-Motion</a>
-<br>
+<details>
+<summary><strong>✅ Base do Projeto (Finalizada)</strong></summary>
 
-## Features 🕹
-- [x] Complete Front-End authentication system with responsive messages to your error, making it easier for the user to understand.
-- [x] Login and registration system using Firebase API.
-- [x] Home with the sampling of all posts already created in order of creation, thus making it easier for the user to know which were the last ones.
-- [x] Fully customizable post creation system, including title, content, image, etc.
-- [x] Post search bar to make it easier if the user wants to search for a specific one.
-- [x] Dashboard with all the posts created by the user allowing the user to see what they were, edit them as they wish and also delete them.
-- [x] Dark/Light theme system with framer-motion for animation, thus allowing the user to decide on the theme that best suits him.
-<br><br>
+- [x] **Sistema de autenticação**  
+  → Firebase Auth com login/registro  
+  → Validação em tempo real de formulários  
+  → Persistência de sessão via localStorage
 
-## Project status 📌
-- Under construction (Features such as adding comments and likes will still be added).
+- [x] **Gestão de posts**  
+  → CRUD completo com Firestore  
+  → Upload de imagens para posts  
+  → Feed ordenado cronologicamente
 
-#
- <br><div align="center"> 
-   <a href="https://instagram.com/pedropml" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-   <a href = "mailto:pedroaksson@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-   <a href="https://www.linkedin.com/in/pedro-paulo-361143226/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
- </div>
+- [x] **Temas Dark/Light**  
+  → Toggle com animação via Framer Motion  
+  → Persistência das preferências  
+  → Estilos dinâmicos com Styled Components
+</details>
 
+<details>
+<summary><strong>🔧 Refatoração - branch release/v2.0.0 (Em desenvolvimento)</strong></summary>
+ 
+Objetivo: melhorias de estrutura e performance  
+
+- [ ] **Migração para SCSS** (`release/v2.1.0`)  
+  → Substituição progressiva de Styled Components  
+  → Variáveis CSS em `_variables.scss`  
+
+- [ ] **Otimização de Performance** (`release/v2.2.0`)  
+  → Análise com DevTools
+
+- [ ] **Padronização do código** (`release/v2.3.0`)  
+  → ESLint + Prettier configurados  
+</details>
+
+<br/>
+
+## 📅 Roadmap futuro
+
+<details>
+<summary><strong>✨ Interações sociais</strong></summary>
+
+Objetivo: Implementar mecanismos de engajamento entre usuários para tornar a rede social mais interativa e dinâmica.
+
+- [ ] **Sistema de likes**  
+   → Botão de like com persistência no Firebase e animação de feedback
+
+- [ ] **Comentários em posts**  
+   → Threads de comentários com nested replies e markdown básico
+</details>
+
+<details>
+<summary><strong>🖼 Perfil do usuário</strong></summary>
+
+Objetivo: Oferecer maior personalização e controle aos usuários sobre sua identidade na plataforma.
+
+- [ ] **Upload de foto de perfil**  
+   → Integração com Firebase Storage para upload e crop de imagens
+
+- [ ] **Página de perfil personalizável**  
+   → Bio, links sociais e highlights de posts marcados
+
+</details>
+
+<details>
+<summary><strong>⚙ Melhorias técnicas</strong></summary>
+
+Objetivo: Aprimorar a base de código para garantir escalabilidade, manutenibilidade e performance.
+
+- [ ] **Migração para Redux Toolkit**  
+   → Substituição gradual do Context API para gestão de estado global
+
+- [ ] **Testes unitários**  
+   → Cobertura com Jest + Testing Library para componentes críticos
+</details>
+
+<br/>
+
+## 💻 Tecnologias Utilizadas
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components">
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router">
+</div>
+
+<br/>
