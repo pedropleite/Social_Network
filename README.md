@@ -71,15 +71,20 @@
  
 Objetivo: melhorias de estrutura e performance  
 
-- [ ] **Migração para SCSS** (`release/v2.1.0`)  
-  → Substituição progressiva de Styled Components  
-  → Variáveis CSS em `_variables.scss`  
+- [ ] **Migração para SCSS e configuração do Webpack** (`release/v2.1.0`)
+  → Configuração do pré-processador  
+  → Remoção completa de CSS-in-JS  
+  → Adaptação da estrutura de estilos  
 
-- [ ] **Otimização de Performance** (`release/v2.2.0`)  
-  → Análise com DevTools
+- [ ] **Padronização do SCSS** (`release/v2.2.0`)
+  → Criação de componentes base reutilizáveis  
+  → Estilos utilitários compartilhados  
 
 - [ ] **Padronização do código** (`release/v2.3.0`)  
-  → ESLint + Prettier configurados  
+  → ESLint + Prettier configurados
+
+- [ ] **Otimização de Performance** (`release/v2.4.0`)  
+  → Análise com DevTools
 </details>
 
 <br/>
