@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { db } from '../firebase/config';
 import { collection, query, orderBy, onSnapshot, where, doc, getDoc } from 'firebase/firestore';
 
-const useFetch = (docCollection, search = null, uid = null, id = null) => {
+export default function useFetch(docCollection, search = null, uid = null, id = null) {
     const [documents, setDocuments] = useState(null);
     const [document, setDocument] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        async function fetchData() {
             setLoading(true);
 
             const collectionRef = await collection(db, docCollection);
@@ -41,7 +41,6 @@ const useFetch = (docCollection, search = null, uid = null, id = null) => {
 
                 setLoading(false);
             } catch (error) {
-                console.log(error);
                 setError(error.message);
                 setLoading(false);
             }
@@ -52,5 +51,3 @@ const useFetch = (docCollection, search = null, uid = null, id = null) => {
 
     return { document, documents, error, loading };
 };
-
-export default useFetch;

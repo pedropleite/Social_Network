@@ -3,7 +3,7 @@ import { Container, Error } from '../../styles/Components';
 import { useState, useEffect } from 'react';
 import useAuthentication from '../../hooks/useAuthentication';
 
-const Register = () => {
+export default function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,7 +18,7 @@ const Register = () => {
         }
     }, [authError]);
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
         setError('');
 
@@ -102,5 +102,3 @@ const Register = () => {
         </Container>
     );
 };
-
-export default Register;

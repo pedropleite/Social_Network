@@ -3,12 +3,10 @@ import useQuery from '../../hooks/useQuery';
 import CardPost from '../../components/CardPost';
 import { Container, ContainerResult, Btn } from './styles';
 
-const Search = () => {
+export default function Search() {
     const URL = useQuery().get('q');
 
     const { documents: posts } = useFetch('posts', URL);
-
-    console.log(posts);
 
     return (
         <Container>
@@ -26,5 +24,3 @@ const Search = () => {
         </Container>
     );
 };
-
-export default Search;

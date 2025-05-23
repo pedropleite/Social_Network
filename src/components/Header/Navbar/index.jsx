@@ -1,10 +1,10 @@
 import React from 'react';
-import Burger from '../Burger';
+import Burguer from '../Burguer';
 import { Container, Brand, ContainerSection } from './styles';
 import { NavLink } from 'react-router-dom';
 import SwitchButton from '../../SwitchButton/';
 
-export const Navbar = (props) => {
+export default function Navbar(props) {
     return (
         <Container>
             <NavLink to="/">
@@ -13,7 +13,7 @@ export const Navbar = (props) => {
                 </Brand>
             </NavLink>
             <ContainerSection>
-                <Burger />
+                <Burguer />
                 <SwitchButton themeToggle={props.themeToggle} />
             </ContainerSection>
         </Container>

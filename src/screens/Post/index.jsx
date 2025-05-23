@@ -2,9 +2,9 @@ import useQuery from '../../hooks/useQuery';
 import useFetch from '../../hooks/useFetch';
 
 import { Container, ContainerPost, Btn } from './styles';
-import { LoadingLoop } from '../../components/LoadingLoop';
+import LoadingLoop from '../../components/LoadingLoop';
 
-const Post = () => {
+export default function Post() {
     const id = useQuery().get('q');
 
     const { document: post, loading } = useFetch('posts', null, null, id);
@@ -33,5 +33,3 @@ const Post = () => {
         </Container>
     );
 };
-
-export default Post;

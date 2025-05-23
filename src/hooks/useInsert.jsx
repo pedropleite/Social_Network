@@ -8,7 +8,7 @@ const initialState = {
     error: null,
 };
 
-const insertReducer = (state, action) => {
+function insertReducer(state, action) {
     switch (action.type) {
         case 'LOADING':
             return {
@@ -30,10 +30,10 @@ const insertReducer = (state, action) => {
     }
 };
 
-const useInsert = (docCollection) => {
+export default function useInsert(docCollection) {
     const [response, dispatch] = useReducer(insertReducer, initialState);
 
-    const insertPost = async (post, image) => {
+    async function insertPost(post, image) {
         dispatch({ type: 'LOADING' });
         try {
             const imageRef = ref(storage, `images/${image.idPost}`);
@@ -54,5 +54,3 @@ const useInsert = (docCollection) => {
 
     return { insertPost, response };
 };
-
-export default useInsert;

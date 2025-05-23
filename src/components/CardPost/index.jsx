@@ -1,6 +1,6 @@
 import { Container, Title, ContainerContent, ContainerDescription, Btn } from './styles';
 
-const CardPost = ({ post }) => {
+export default function CardPost({ post }) {
     return (
         <Container>
             <Title>{post.title}</Title>
@@ -25,5 +25,3 @@ const CardPost = ({ post }) => {
         </Container>
     );
 };
-
-export default CardPost;

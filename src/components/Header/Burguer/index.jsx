@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { StyledBurger } from './styles';
 import RightNav from '../RightNav';
 
-const Burger = () => {
+export default function Burguer() {
     const [open, setOpen] = useState(false);
 
-    const handleModal = () => {
-        setOpen(!open);
+    function handleModal() {
+        setOpen(open => !open);
     };
 
     return (
@@ -20,5 +20,3 @@ const Burger = () => {
         </>
     );
 };
-
-export default Burger;

@@ -1,5 +1,5 @@
 import { Container } from "./styles";
 
-export const LoadingLoop = () => {
+export default function LoadingLoop() {
     return <Container><div></div></Container>;
 }

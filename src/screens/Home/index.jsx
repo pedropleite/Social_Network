@@ -4,17 +4,17 @@ import useFetch from '../../hooks/useFetch';
 
 import { SearchForm, ContainerSearch, ContainerPosts, BtnLink, Container } from './styles';
 import CardPost from '../../components/CardPost';
-import { LoadingLoop } from '../../components/LoadingLoop';
+import LoadingLoop from '../../components/LoadingLoop';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-const Home = () => {
+export default function Home() {
     const [searched, setSearched] = useState('');
     const { documents: posts, error, loading } = useFetch('posts');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
 
         if (searched) {
@@ -46,5 +46,3 @@ const Home = () => {
         </Container>
     );
 };
-
-export default Home;

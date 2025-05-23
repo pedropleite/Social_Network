@@ -9,12 +9,12 @@ import {
     BtnEdit,
 } from './styles';
 
-import { useAuthValue } from '../../store/AuthContext';
+import { useAuthValue } from '../../context/AuthContext';
 import useFetch from '../../hooks/useFetch';
 import useDelete from '../../hooks/useDelete';
-import { LoadingLoop } from '../../components/LoadingLoop';
+import LoadingLoop from '../../components/LoadingLoop';
 
-const Dashboard = () => {
+export default function Dashboard() {
     const { user } = useAuthValue();
     const uid = user.uid;
 
@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     const { documents: posts } = useFetch('posts', null, uid);
 
-    const handleContent = () => {
+    function handleContent() {
         if (posts && posts.length === 0) {
                 return (<ContainerError>
                             <span>You don't have any posts created.</span>
@@ -66,5 +66,3 @@ const Dashboard = () => {
         </Container>
     );
 };
-
-export default Dashboard;

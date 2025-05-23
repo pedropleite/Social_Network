@@ -1,7 +1,7 @@
 import { Container } from '../../styles/Components';
 import { Btn } from './styles';
 
-const About = () => {
+export default function About() {
     return (
         <Container>
             <div style={{ flexDirection: 'column' }}>
@@ -23,5 +23,3 @@ const About = () => {
         </Container>
     );
 };
-
-export default About;

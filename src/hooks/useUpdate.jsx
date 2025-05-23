@@ -8,7 +8,7 @@ const initialState = {
     error: null,
 };
 
-const updateReducer = (state, action) => {
+function updateReducer(state, action) {
     switch (action.type) {
         case 'LOADING':
             return {
@@ -30,10 +30,10 @@ const updateReducer = (state, action) => {
     }
 };
 
-const useUpdate = (docCollection) => {
+export default function useUpdate(docCollection) {
     const [response, dispatch] = useReducer(updateReducer, initialState);
 
-    const updatePost = async (id, data, image = null) => {
+    async function updatePost(id, data, image = null) {
         dispatch({ type: 'LOADING' });
         try {
             if (image) {
@@ -56,5 +56,3 @@ const useUpdate = (docCollection) => {
 
     return { updatePost, response };
 };
-
-export default useUpdate;

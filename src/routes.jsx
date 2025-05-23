@@ -1,5 +1,5 @@
 import Home from './screens/Home';
-import About from './screens/About/index.js';
+import About from './screens/About';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Dashboard from './screens/Dashboard';
@@ -8,11 +8,14 @@ import Search from './screens/Search';
 import Post from './screens/Post';
 import EditPost from './screens/EditPost';
 
-import { useAuthValue } from './store/AuthContext';
+import { useAuthValue } from './context/AuthContext';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import LoadingLoop  from './components/LoadingLoop';
 
-const Paths = () => {
-    const { user } = useAuthValue();
+export default function Paths() {    
+    const { user, isLoading } = useAuthValue();
+
+    if (isLoading) <LoadingLoop />
 
     return (
         <Routes>
@@ -28,5 +31,3 @@ const Paths = () => {
         </Routes>
     );
 };
-
-export default Paths;

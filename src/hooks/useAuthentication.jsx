@@ -8,13 +8,13 @@ import {
 
 import { useState } from 'react';
 
-const useAuthentication = () => {
+export default function useAuthentication() {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
 
     const auth = getAuth();
 
-    const createUser = async (data) => {
+    async function createUser(data) {
         setLoading(true);
 
         try {
@@ -35,11 +35,11 @@ const useAuthentication = () => {
         setLoading(false);
     };
 
-    const logout = () => {
+    function logout() {
         signOut(auth);
     };
 
-    const login = async (data) => {
+    async function login(data) {
         setLoading(true);
         setError(null);
 
@@ -67,5 +67,3 @@ const useAuthentication = () => {
         login,
     };
 };
-
-export default useAuthentication;

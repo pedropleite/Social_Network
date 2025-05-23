@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthValue } from '../../store/AuthContext';
+import { useAuthValue } from '../../context/AuthContext';
 import useUpdate from '../../hooks/useUpdate';
 import useFetch from '../../hooks/useFetch';
 import useQuery from '../../hooks/useQuery';
@@ -8,7 +8,7 @@ import useQuery from '../../hooks/useQuery';
 import { Container, Error } from '../../styles/Components';
 import { ContainerCreatePost, TitleImage } from './styles';
 
-const EditPost = () => {
+export default function EditPost() {
     const URL = useQuery().get('q');
     const { document: post } = useFetch('posts', null, null, URL);
 
@@ -32,7 +32,7 @@ const EditPost = () => {
     const { updatePost, response } = useUpdate('posts');
     const { user } = useAuthValue();
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
         setFormError('');
 
@@ -133,5 +133,3 @@ const EditPost = () => {
         </Container>
     );
 };
-
-export default EditPost;

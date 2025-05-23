@@ -4,7 +4,7 @@ import IconInstagram from '../../assets/icons/instagram.png';
 import IconTwitter from '../../assets/icons/twitter.png';
 import IconWhatsapp from '../../assets/icons/whatsapp.png';
 
-export const Footer = () => {
+export default function Footer() {
     return (
         <ContainerFooter>
             <h3>Write about what you are interested in</h3>

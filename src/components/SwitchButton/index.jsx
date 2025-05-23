@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Handle } from './styles';
 
-const SwitchButton = (props) => {
+export default function SwitchButton(props) {
     const [isOn, setIsOn] = useState(false);
 
     const handleClick = () => {
@@ -21,5 +21,3 @@ const SwitchButton = (props) => {
         </Container>
     );
 };
-
-export default SwitchButton;

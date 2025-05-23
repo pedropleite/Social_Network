@@ -3,7 +3,7 @@ import { Container, Error } from '../../styles/Components';
 import useAuthentication from '../../hooks/useAuthentication';
 import { useState, useEffect } from 'react';
 
-const Login = () => {
+export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -16,7 +16,7 @@ const Login = () => {
         }
     }, [authError]);
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
 
         setError('');
@@ -74,5 +74,3 @@ const Login = () => {
         </Container>
     );
 };
-
-export default Login;

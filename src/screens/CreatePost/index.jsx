@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthValue } from '../../store/AuthContext';
+import { useAuthValue } from '../../context/AuthContext';
 import useInsert from '../../hooks/useInsert';
 
 import { Container, Error } from '../../styles/Components';
 import { ContainerCreatePost } from './styles';
 
-const CreatePost = () => {
+export default function CreatePost() {
     const [title, setTitle] = useState('');
     const [image, setImage] = useState('');
     const [content, setContent] = useState('');
@@ -17,7 +17,7 @@ const CreatePost = () => {
     const { insertPost, response } = useInsert('posts');
     const { user } = useAuthValue();
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
         setFormError('');
 
@@ -112,5 +112,3 @@ const CreatePost = () => {
         </Container>
     );
 };
-
-export default CreatePost;

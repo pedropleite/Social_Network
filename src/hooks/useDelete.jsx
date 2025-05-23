@@ -8,7 +8,7 @@ const initialState = {
     error: null,
 };
 
-const deleteReducer = (state, action) => {
+function deleteReducer(state, action) {
     switch (action.type) {
         case 'LOADING':
             return {
@@ -30,10 +30,10 @@ const deleteReducer = (state, action) => {
     }
 };
 
-const useDelete = (docCollection) => {
+export default function useDelete(docCollection) {
     const [response, dispatch] = useReducer(deleteReducer, initialState);
 
-    const deletePost = async (idPost, id) => {
+    async function deletePost(idPost, id) {
         dispatch({ type: 'LOADING' });
         try {
             const imageRef = ref(storage, `images/${idPost}`);
@@ -51,4 +51,3 @@ const useDelete = (docCollection) => {
     return { deletePost, response };
 };
 
-export default useDelete;

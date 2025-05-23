@@ -1,9 +1,8 @@
-import React from 'react';
 import { LinkList, StyledNavLink, LogoutBtn } from './styles';
 import useAuthentication from '../../../hooks/useAuthentication';
-import { useAuthValue } from '../../../store/AuthContext';
+import { useAuthValue } from '../../../context/AuthContext';
 
-const RightNav = (props) => {
+export default function RightNav(props) {
     const { user } = useAuthValue();
     const { logout } = useAuthentication();
 
@@ -55,5 +54,3 @@ const RightNav = (props) => {
         </LinkList>
     );
 };
-
-export default RightNav;
