@@ -11,7 +11,7 @@ const Container = styled.div`
 
     img {
         width: 100%;
-        height: 500px;
+        height: 490px;
         max-width: 100%;
         object-fit: cover;
     }
