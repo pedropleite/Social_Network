@@ -4,12 +4,12 @@ import { getStorage } from 'firebase/storage';
 import 'firebase/storage';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyBNRrUOq6c5RvN8untgS98t1uMySfTzJ44',
-    authDomain: 'realsocial-b7b6a.firebaseapp.com',
-    projectId: 'realsocial-b7b6a',
-    storageBucket: 'realsocial-b7b6a.appspot.com',
-    messagingSenderId: '624168100001',
-    appId: '1:624168100001:web:1536940323e9bdc11d90e0',
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
