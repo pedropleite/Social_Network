@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 50rem !important;
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 90% !important;
+    padding: 2rem 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @media (min-width: 768px) {
+        width: 100% !important;
+        padding: 2rem 4rem !important;
+    }
+}
+
+.previewLabel {
+    align-self: center;
+    font-weight: bold;
+}
+
+.previewImage {
+    align-self: center;
+    width: 90%;
+}
+
+.button {
+    width: 8em;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.spinner {
+    margin: 3rem 0;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #0a66c2;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

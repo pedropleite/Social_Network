@@ -1,0 +1,141 @@
+.container {
+    height: inherit;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    color: black;
+    margin: 2.2rem 0;
+    padding: 2rem 0;
+    background-color: white;
+    align-self: center;
+    width: 47.5rem;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
+}
+
+.subtitle {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.emptyContent {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    span:last-of-type {
+        margin-bottom: 1.8rem;
+    }
+
+    .createButton {
+        max-width: 30%;
+        text-align: center;
+        background-color: #0a66c2;
+        padding: 0.7rem 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #004182;
+        }
+    }
+}
+
+.contentContainer {
+    margin: 2rem 0;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.8px solid rgba(0, 0, 0, 0.1);
+    padding: 0 0.7rem;
+
+    span {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 0.5rem;
+    }
+}
+
+.post {
+    width: 95%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .postContent {
+        margin: 0.6rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            width: 40%;
+            font-size: 1rem;
+        }
+
+        .actions {
+            width: 60%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .actionButton {
+                font-size: 1rem;
+                font-weight: 600;
+                border: 1.5px solid black;
+                height: 1.8rem;
+                width: 6rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: #0a66c2;
+                    color: white;
+                    border-color: white;
+                }
+            }
+
+            .deleteButton {
+                height: 2rem;
+                width: 6.2rem;
+
+                &:hover {
+                    background-color: #ff4444;
+                }
+            }
+        }
+    }
+}

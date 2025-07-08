@@ -1,0 +1,64 @@
+.aboutContainer {
+    justify-content: center;
+
+    &>div {
+        max-width: 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+}
+
+.title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #3b82f6;
+}
+
+.paragraph {
+    margin-bottom: 0.5rem;
+}
+
+.paragraphStrong {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 0.5px solid white;
+    height: 3.5rem;
+    width: 15rem;
+    max-width: 40%;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        min-width: 100%;
+    }
+}
+
+.linkedin {
+    background-color: #161b22;
+    color: white;
+}
+
+.github {
+    background-color: #0a66c2;
+    color: white;
+}
