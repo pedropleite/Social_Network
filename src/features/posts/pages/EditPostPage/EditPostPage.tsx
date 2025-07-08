@@ -9,6 +9,8 @@ import { LoadingLoop } from "../../../shared/components/LoadingLoop/LoadingLoop"
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { validateImage } from "../../utils/validateImage";
 import { useEffect } from "react";
+import { LoadingButton } from "../../../shared/components/LoadingButton/LoadingButton";
+import { ErrorMessage } from "../../../shared/components/ErrorMessage/ErrorMessage";
 
 interface Inputs {
     title: string
@@ -125,12 +127,10 @@ export function EditPostPage() {
                         pattern={/^\s*([A-Za-zÀ-ÖØ-öø-ÿ0-9\s]+)(\s*,\s*([A-Za-zÀ-ÖØ-öø-ÿ0-9\s]+))*\s*$/}
                         required
                     />
-
-                    {!loadingPostUpdate && <button className={styles.button}>Update</button>}
-                    {loadingPostUpdate && <button className={styles.button} disabled>Loading...</button>}
-
-                    {errorPostUpdate && <p className={styles.error}>{errorPostUpdate}</p>}
-                    {errorPost && <p className={styles.error}>{errorPost}</p>}
+                    
+                    <LoadingButton isLoading={loadingPostUpdate} text="Update" className={styles.button}/>
+                    <ErrorMessage hasError={errorPostUpdate} errorText={errorPostUpdate} />
+                    <ErrorMessage hasError={errorPost} errorText={errorPost} />
                 </form>
             </div>
         </div>

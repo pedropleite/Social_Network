@@ -1,8 +1,8 @@
 import { createContext, useState, useEffect, type ReactNode } from 'react';
 import type { User } from 'firebase/auth';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useAuthentication } from '../hooks/useAuthentication';
 import { useAsyncStatus } from '../../shared/hooks/useAsyncStatus';
+import { useAuth } from '../hooks/useAuth';
 
 interface AuthContextType {
     user: User | null;
@@ -23,11 +23,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const [user, setUser] = useState<User | null>(null);
     const { loading, setLoading, setSuccess } = useAsyncStatus({ loading: true })
 
-    const { auth } = useAuthentication();
+    const auth = useAuth();
 
     useEffect(() => {
-        setLoading()
-
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user)
             setSuccess()

@@ -1,9 +1,11 @@
 import {
-    getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut,
+    createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut,
 } from 'firebase/auth';
 
 import { useAsyncStatus } from '../../shared/hooks/useAsyncStatus';
 import { useNavigate } from 'react-router';
+import { handleAuthenticationError } from '../utils/handleAuthenticationError';
+import { useAuth } from './useAuth';
 
 interface userType {
     displayName?: string
@@ -12,29 +14,9 @@ interface userType {
 }
 
 export function useAuthentication() {
-    const { loading, error: errorMessage, setLoading, setSuccess, setError: setErrorMessage } = useAsyncStatus()
-
-    const auth = getAuth();
+    const { loading, error: errorMessage, setLoading, setError: setErrorMessage } = useAsyncStatus()
+    const auth = useAuth()
     const navigate = useNavigate()
-
-    function handleError(error: unknown) {
-        if (!(error instanceof Error)) {
-            setErrorMessage('An unknown error occurred');
-            return;
-        }
-
-        if (error.message.includes('user-not-found')) {
-            setErrorMessage('User not found');
-            return;
-        }
-        
-        if (error.message.includes('wrong-password')) {
-            setErrorMessage('Wrong password');
-            return;
-        }
-
-        setErrorMessage('Something went wrong');
-    }
 
     async function createUser({ email, password, displayName }: userType) {
         setLoading();
@@ -45,9 +27,7 @@ export function useAuthentication() {
 
             navigate("/")
         } catch (error: unknown) {
-            handleError(error)
-        } finally {
-            setSuccess();
+            handleAuthenticationError(error, setErrorMessage)
         }
     };
 
@@ -63,13 +43,11 @@ export function useAuthentication() {
             await signInWithEmailAndPassword(auth, email, password);
             navigate("/")
         } catch (error: unknown) {
-            handleError(error)
-        } finally {
-            setSuccess();
+            handleAuthenticationError(error, setErrorMessage)
         }
     };
 
     return {
-        auth, error: errorMessage, loading, createUser, logout, login,
+        error: errorMessage, loading, createUser, logout, login,
     };
 };

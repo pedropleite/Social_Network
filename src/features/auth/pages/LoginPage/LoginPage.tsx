@@ -1,4 +1,6 @@
 import formSignImg2 from '../../../../assets/signUp.jpg';
+import { ErrorMessage } from '../../../shared/components/ErrorMessage/ErrorMessage';
+import { LoadingButton } from '../../../shared/components/LoadingButton/LoadingButton';
 import { Input } from '../../components/Input/Input';
 import { useAuthentication } from '../../hooks/useAuthentication';
 import { useForm, type SubmitHandler } from "react-hook-form"
@@ -41,9 +43,8 @@ export function LoginPage() {
                         pattern={/^[A-Za-z\d!@#$%^&*()_\-+=[\]{}|\\;:'",.<>/?`~]{8,20}$/}
                         required
                     />
-                    {!loading && <button>Login</button>}
-                    {loading && <button disabled>Loading...</button>}
-                    {authError && <p className='errorDefault'>{authError}</p>}
+                    <LoadingButton isLoading={loading} text='Login'/>
+                    <ErrorMessage errorText={authError} hasError={authError}/>
                 </form>
                 <section>
                     <img src={formSignImg2} alt={'Descriptive'} />
