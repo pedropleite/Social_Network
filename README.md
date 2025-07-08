@@ -5,89 +5,74 @@
 <img width="100%" src="https://github.com/pedropleite/Social_Network/blob/main/READMEGif.gif">
 <br>
 
-# PT-BR
-
 ## 🔍 Sobre o Projeto
-<p>Link para a aplicação: https://social-networkp.netlify.app/</p>
 
+📌 **Deploy:** [https://social-networkp.netlify.app/](https://social-networkp.netlify.app/)
 
-<p>CRUD construido em ReactJS usando o Firebase como banco de dados para facilitar a autenticação e armazenamento de dados, além do auxílio de ferramentas como o Context API para uma melhor administração do estado e propriedades, Styled-Components para uma estilização mais prática usando JavaScript, Axios para requisições HTTP e React-Router para criação de rotas.</p>
-<p>A aplicação consiste em um CRUD(criação, consulta, atualização e destruição de dados) simulando uma rede social. Nela é possível a criação de usuários, a criação de posts inteiramente personalizável, possui uma Home que mostra os posts criados em ordem de criação (similar ao que o Instagram faz), há também um dashboard com os seus posts para te permitir editá-los ou exclui-los conforme queira, há dois modos de brilho, o dark e o light, facilitando assim para quem possui alguma sensibilidade à luz e também uma barra de pesquisa para facilitar a experiência do usuário para caso ela queira ver um post em específico.</p>
-<p>Essa aplicação foi pensada para realmente se parecer com uma rede social, permitindo os usuários criarem posts sobre o seu dia a dia e interagirem com os seus colegas.</p>
+A **Social Network** é uma aplicação web que simula uma rede social moderna, desenvolvida com foco em **boas práticas**, **modularidade** e **experiência do usuário**.
 
-<br/>
+Construída com **React**, **TypeScript** e **Firebase**, oferece autenticação de usuários, CRUD completo de posts (com upload de imagens), pesquisa por tags, tema escuro/claro com persistência de preferência, tudo isso em uma interface **responsiva** e de **fácil manutenção**.
+
+Além do CRUD, o projeto segue conceitos de **arquitetura em camadas**, **componentização reutilizável**, **tipagem forte** e **organização de código** para garantir **escalabilidade**, **performance** e **clareza para colaboradores**.
+
+---
 
 ## ✨ Funcionalidades Principais
+A aplicação possui recursos fundamentais para simular uma rede social real, com uma base sólida de código limpo e modular:
 
-### 🔐 Autenticação:
-- **Sistema completo de login e registro**  
-   → Integração completa com Firebase Auth incluindo registro e login.
-- **Mensagens de erro claras e intuitivas**  
-   → Feedback visual para erros comuns como email inválido.
-- **Persistência de sessão**  
-   → Os usuários permanecem logados mesmo após fechar o navegador.
+### 🔐 Autenticação
+- **Login e registro de usuários** com Firebase Auth.
+- **Validação de formulários** usando React Hook Form.
+- **Mensagens de erro claras** para uma boa UX.
+- **Persistência de sessão** para manter o usuário logado.
 
-### 📝 Posts:
-- **Criação de posts com texto e imagens**  
-   → Interface simples para criar posts ricos com preview em tempo real.
-- **Dashboard pessoal para gerenciamento de posts**  
-   → Acesso rápido a todos seus posts com opções de edição e exclusão.
-- **Feed organizado cronologicamente**  
-   → Posts exibidos do mais recente para o mais antigo, com carregamento progressivo.
-- **Barra de pesquisa integrada**  
-   → Encontre posts específicos por palavras-chave ou autor.
+### 📝 Posts
+- **CRUD completo de posts**, com texto e imagem.
+- **Dashboard pessoal** para edição e exclusão de posts.
+- **Feed cronológico**, do mais recente ao mais antigo.
+- **Pesquisa por tags**, com filtragem em tempo real.
 
-### 🎨 Interface:
-- **Tema dark/light com transição animada**  
-   → Troca suave entre modos de cor.
-- **Layout responsivo**  
-   → Experiência otimizada para mobile, tablet e desktop.
+### 🎨 Interface
+- **Tema dark/light**, com troca fluida e armazenamento de preferência.
+- **Layout responsivo**, adaptado para desktop, tablet e mobile.
+- **Estilização com SCSS Modules**, garantindo modularidade e reaproveitamento.
 
-<br/>
+---
 
-## 🛠 Organização do desenvolvimento
+## 🛠 Organização do Desenvolvimento
+
+Esta seção funciona como uma **mini árvore Git** para mostrar a progressão real do projeto, destacando a motivação de cada etapa e suas mudanças principais. Assim, qualquer colaborador ou recrutador entende **como o projeto evoluiu**.
 
 <details>
-<summary><strong>✅ Base do Projeto (Finalizada)</strong></summary>
+<summary><strong>🌱 Versão inicial do projeto</strong></summary>
 
-- [x] **Sistema de autenticação**  
-  → Firebase Auth com login/registro  
-  → Validação em tempo real de formulários  
-  → Persistência de sessão via localStorage
+**Contexto:** Primeira versão criada para validar o CRUD básico e o fluxo de autenticação.
 
-- [x] **Gestão de posts**  
-  → CRUD completo com Firestore  
-  → Upload de imagens para posts  
-  → Feed ordenado cronologicamente
+**Branch:** Nenhuma branch de release específica — desenvolvimento inicial direto na `main`.
 
-- [x] **Temas Dark/Light**  
-  → Toggle com animação via Framer Motion  
-  → Persistência das preferências  
-  → Estilos dinâmicos com Styled Components
+**Principais pontos:**
+- Estruturação do CRUD com ReactJS.
+- Uso de **Firebase** para autenticação e armazenamento de posts.
+- Estilização com **Styled Components**.
+- Implementação do tema dark/light com persistência.
 </details>
 
 <details>
-<summary><strong>🔧 Refatoração - branch release/v2.0.0 (Em desenvolvimento)</strong></summary>
- 
-Objetivo: melhorias de estrutura e performance  
+<summary><strong>🌿 Release 2.0.0 (branch ativa)</strong></summary>
 
-- [ ] **Migração para SCSS e configuração do Webpack** (`release/v2.1.0`)
-  → Configuração do pré-processador  
-  → Remoção completa de CSS-in-JS  
-  → Adaptação da estrutura de estilos  
+**Contexto:** Refatoração ampla do projeto, tornando-o mais modular, tipado e alinhado com boas práticas para crescer de forma escalável.
 
-- [ ] **Padronização do SCSS** (`release/v2.2.0`)
-  → Criação de componentes base reutilizáveis  
-  → Estilos utilitários compartilhados  
+**Branch:** `release/2.0.0`
 
-- [ ] **Padronização do código** (`release/v2.3.0`)  
-  → ESLint + Prettier configurados
-
-- [ ] **Otimização de Performance** (`release/v2.4.0`)  
-  → Análise com DevTools
+**Principais melhorias:**
+- ✅ **Migração completa para TypeScript** para garantir tipagem forte e segurança em toda a base de código.
+- ✅ **Adoção do React Hook Form** em todos os formulários (cadastro, login, criação, edição e exclusão de posts), melhorando validações e usabilidade.
+- ✅ **Substituição de Styled Components por SCSS Modules**, tornando a estilização mais modular e organizada.
+- ✅ **Refatoração geral de componentes e funções**, deixando o projeto dividido em camadas (hooks, contextos, componentes compartilhados, páginas).
+- ✅ Organização do código para facilitar a manutenção e colaboração futura.
 </details>
 
-<br/>
+---
 
 ## 📅 Roadmap futuro
 
@@ -134,11 +119,14 @@ Objetivo: Aprimorar a base de código para garantir escalabilidade, manutenibili
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS Modules">
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components">
-  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white" alt="React Hook Form">
   <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router">
+  <img src="https://img.shields.io/badge/Context_API-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="Context API">
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint">
 </div>
+
 
 <br/>
