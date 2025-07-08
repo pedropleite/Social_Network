@@ -1,6 +1,6 @@
 import { deleteObject, getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../../firebase/config";
-import { useAsyncStatus } from "../../shared/hooks/useStatus";
+import { useAsyncStatus } from "../../shared/hooks/useAsyncStatus";
 import { addDoc, collection, deleteDoc, doc, Timestamp, updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router";
 

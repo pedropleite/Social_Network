@@ -20,7 +20,7 @@ export function LoginPage() {
 
     return (
         <section className='containerDefault'>
-            <div style={{ minHeight: '450px' }}>
+            <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h1>Login to post</h1>
                     <span>Log in and share your experiences</span>

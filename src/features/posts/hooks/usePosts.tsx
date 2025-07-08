@@ -3,7 +3,7 @@ import { collection, query, onSnapshot, orderBy, where, QueryConstraint } from '
 import { db } from '../../../firebase/config';
 import type { Post } from '../types/Post';
 import { mapDocToPost } from '../utils/mapDocToPost';
-import { useAsyncStatus } from '../../shared/hooks/useStatus';
+import { useAsyncStatus } from '../../shared/hooks/useAsyncStatus';
 
 interface UsePostsProps {
     search?: string | null

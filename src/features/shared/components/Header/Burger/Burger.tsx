@@ -3,11 +3,11 @@ import styles from './Burger.module.scss';
 
 import { RightNav } from '../RightNav/RightNav';
 
-export function Burguer() {
+export function Burger() {
     const [open, setOpen] = useState(false);
 
     function handleModal() {
-        setOpen(open => !open);
+        setOpen(prev => !prev);
     };
 
     return (

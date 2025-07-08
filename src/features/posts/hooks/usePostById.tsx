@@ -3,7 +3,7 @@ import { db } from "../../../firebase/config"
 import { doc, getDoc } from "firebase/firestore"
 import type { Post } from "../types/Post"
 import { mapDocToPost } from "../utils/mapDocToPost"
-import { useAsyncStatus } from "../../shared/hooks/useStatus"
+import { useAsyncStatus } from "../../shared/hooks/useAsyncStatus"
 
 interface UsePostByIdProps {
     id: string
@@ -15,7 +15,7 @@ export function usePostById({ id }: UsePostByIdProps) {
     useEffect(() => {
         setLoading()
 
-        async function fetchPosts() {
+        async function fetchPost() {
             try {
                 const docRef = doc(db, "posts", id)
                 const docSnap = await getDoc(docRef)
@@ -34,7 +34,7 @@ export function usePostById({ id }: UsePostByIdProps) {
             }
         }
 
-        fetchPosts()
+        fetchPost()
     }, [id, setLoading, setSuccess, setError])
 
     return { post, loading, error }

@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router';
 
-import { Burguer } from './Burger/Burger';
+import { Burger } from './Burger/Burger';
+import { SwitchButton } from './SwitchButton/SwitchButton';
 
 import styles from './Header.module.scss';
-import { SwitchButton } from './SwitchButton/SwitchButton';
 
 export function Header() {
     return (
@@ -16,7 +16,7 @@ export function Header() {
                 </span>
             </NavLink>
             <div className={styles.actions}>
-                <Burguer />
+                <Burger />
                 <SwitchButton />
             </div>
         </header>

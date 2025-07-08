@@ -46,8 +46,8 @@ export function EditPostPage() {
         const tags = data.tags
         const tagsArray = tags.split(',').map((tag) => tag.trim().toLowerCase());
 
-        let imagePostData
         const imageValue = watch("image")
+        let imagePostData
 
         if (imageValue && imageValue.length > 0 && imageValue[0]) {
             imagePostData = {

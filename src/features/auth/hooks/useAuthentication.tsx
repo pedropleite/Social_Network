@@ -2,7 +2,7 @@ import {
     getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut,
 } from 'firebase/auth';
 
-import { useAsyncStatus } from '../../shared/hooks/useStatus';
+import { useAsyncStatus } from '../../shared/hooks/useAsyncStatus';
 import { useNavigate } from 'react-router';
 
 interface userType {
@@ -18,17 +18,22 @@ export function useAuthentication() {
     const navigate = useNavigate()
 
     function handleError(error: unknown) {
-        if (error instanceof Error) {
-            if (error.message.includes('user-not-found')) {
-                setErrorMessage('User not found');
-            } else if (error.message.includes('wrong-password')) {
-                setErrorMessage('Wrong password');
-            } else {
-                setErrorMessage('Something went wrong');
-            }
-        } else {
+        if (!(error instanceof Error)) {
             setErrorMessage('An unknown error occurred');
+            return;
         }
+
+        if (error.message.includes('user-not-found')) {
+            setErrorMessage('User not found');
+            return;
+        }
+        
+        if (error.message.includes('wrong-password')) {
+            setErrorMessage('Wrong password');
+            return;
+        }
+
+        setErrorMessage('Something went wrong');
     }
 
     async function createUser({ email, password, displayName }: userType) {

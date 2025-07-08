@@ -1,5 +1,3 @@
-
-
 import { FacebookIcon } from '../Icons/FacebookIcon';
 import { InstagramIcon } from '../Icons/InstagramIcon';
 import { TwitterIcon } from '../Icons/TwitterIcon';

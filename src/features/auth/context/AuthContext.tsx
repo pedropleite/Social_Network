@@ -2,8 +2,7 @@ import { createContext, useState, useEffect, type ReactNode } from 'react';
 import type { User } from 'firebase/auth';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useAuthentication } from '../hooks/useAuthentication';
-import { useAsyncStatus } from '../../shared/hooks/useStatus';
-
+import { useAsyncStatus } from '../../shared/hooks/useAsyncStatus';
 
 interface AuthContextType {
     user: User | null;
