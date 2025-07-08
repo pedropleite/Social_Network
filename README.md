@@ -1,7 +1,4 @@
 # Social Network 📱
-<br>
-
-## Video da aplicação | Application video:
 <img width="100%" src="https://github.com/pedropleite/Social_Network/blob/main/READMEGif.gif">
 <br>
 
