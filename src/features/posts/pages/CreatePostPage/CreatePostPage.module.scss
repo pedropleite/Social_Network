@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.form {
+    width: 90% !important;
+    padding: unset !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+.button {
+    width: 8em;
+}
