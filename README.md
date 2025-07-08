@@ -7,7 +7,7 @@
 
 ## 🔍 Sobre o Projeto
 
-📌 **Deploy:** [https://social-networkp.netlify.app/](https://social-networkp.netlify.app/)
+📌 **Deploy:** <a href="https://social-networkp.netlify.app" target="_blank">https://social-networkp.netlify.app/</a>
 
 A **Social Network** é uma aplicação web que simula uma rede social moderna, desenvolvida com foco em **boas práticas**, **modularidade** e **experiência do usuário**.
 
