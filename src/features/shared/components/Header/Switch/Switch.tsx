@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import styles from './SwitchButton.module.scss';
+import styles from './Switch.module.scss';
 
-export function SwitchButton() {
+export function Switch() {
     const themeLocalStorage = localStorage.getItem('theme') === 'dark'
     const [isOn, setIsOn] = useState(themeLocalStorage);
 
@@ -12,8 +12,10 @@ export function SwitchButton() {
     }, [isOn]);
 
     return (
-        <div onClick={() => setIsOn(prev => !prev)} className={`${styles.wrapper} ${isOn ? styles.on : styles.off}`}>
-            <div className={styles.circle} />
+        <div>
+            <div onClick={() => setIsOn(prev => !prev)} className={`${styles.wrapper} ${isOn ? styles.on : styles.off}`}>
+                <div className={styles.circle} />
+            </div>
         </div>
     );
 }

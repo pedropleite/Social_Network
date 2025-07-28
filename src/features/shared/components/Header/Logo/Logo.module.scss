@@ -1,0 +1,50 @@
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    .icon {
+        position: relative;
+        width: 1.7rem;
+        height: 1.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(35%, -35%);
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #22c55e;
+            border-radius: 9999px;
+            border: 2px solid white;
+        }
+
+        svg {
+            width: 0.9rem;
+            height: 0.9rem;
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        background: linear-gradient(to right, var(--tw-gradient-stops));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .version {
+        font-size: 0.656rem;
+        color: #000;
+        background-color: #f2edee;
+        padding: 0.125rem 0.5rem;
+        border-radius: 6.75px;
+    }
+}

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router';
-import { useAuthValue } from '../../../../auth/hooks/useAuthValue';
-import { useAuthentication } from '../../../../auth/hooks/useAuthentication';
+import { useAuthValue } from '../../../../../auth/hooks/useAuthValue';
+import { useAuthentication } from '../../../../../auth/hooks/useAuthentication';
 
 import styles from './RightNav.module.scss';
 
