@@ -3,7 +3,7 @@
     bottom: 0;
     padding: 1rem 0;
     background-color: var(--background);
-    color: var(--font-color);
+    color: var(--primary);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 
@@ -55,5 +55,5 @@
 .copy {
     margin-top: 1.5rem;
     font-size: 0.875rem;
-    color: var(--font-color);
+    color: var(--primary);
 }

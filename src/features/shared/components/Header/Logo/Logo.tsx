@@ -11,8 +11,10 @@ export function Logo() {
                     <span></span>
                     <UsersIcon />
                 </div>
-                <span className={styles.title}>SOCIAL</span>
-                <span className={styles.version}>Beta</span>
+                <div className={styles.title}>
+                    <span>Momentos</span>
+                    <span>Compartilhe sua vida</span>
+                </div>
             </NavLink>
         </div>
     )

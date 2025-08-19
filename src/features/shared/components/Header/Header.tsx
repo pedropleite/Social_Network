@@ -1,16 +1,16 @@
 import styles from './Header.module.scss';
 
-import { Links } from './Links/Links';
+import { Nav } from './Nav/Nav';
 import { Logo } from './Logo/Logo';
-import { Switch } from './Switch/Switch';
+import { Actions } from './Actions/Actions';
 
 export function Header() {
     return (
         <header className={styles.container}>
             <div className={styles.header}>
                 <Logo />
-                <Links />
-                <Switch />
+                <Nav />
+                <Actions />
             </div>
         </header>
     );
