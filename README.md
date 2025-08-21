@@ -1,4 +1,5 @@
 # Social Network 📱
+
 <img width="100%" src="https://github.com/pedropleite/Social_Network/blob/main/READMEGif.gif">
 <br>
 
@@ -15,21 +16,25 @@ Além do CRUD, o projeto segue conceitos de **arquitetura em camadas**, **compon
 ---
 
 ## ✨ Funcionalidades Principais
+
 A aplicação possui recursos fundamentais para simular uma rede social real, com uma base sólida de código limpo e modular:
 
 ### 🔐 Autenticação
+
 - **Login e registro de usuários** com Firebase Auth.
 - **Validação de formulários** usando React Hook Form.
 - **Mensagens de erro claras** para uma boa UX.
 - **Persistência de sessão** para manter o usuário logado.
 
 ### 📝 Posts
+
 - **CRUD completo de posts**, com texto e imagem.
 - **Dashboard pessoal** para edição e exclusão de posts.
 - **Feed cronológico**, do mais recente ao mais antigo.
 - **Pesquisa por tags**, com filtragem em tempo real.
 
 ### 🎨 Interface
+
 - **Tema dark/light**, com troca fluida e armazenamento de preferência.
 - **Layout responsivo**, adaptado para desktop, tablet e mobile.
 - **Estilização com SCSS Modules**, garantindo modularidade e reaproveitamento.
@@ -48,11 +53,12 @@ Esta seção funciona como uma **mini árvore Git** para mostrar a progressão r
 **Branch:** Nenhuma branch de release específica — desenvolvimento inicial direto na `main`.
 
 **Principais pontos:**
+
 - Estruturação do CRUD com ReactJS.
 - Uso de **Firebase** para autenticação e armazenamento de posts.
 - Estilização com **Styled Components**.
 - Implementação do tema dark/light com persistência.
-</details>
+      </details>
 
 <details>
 <summary><strong>🌿 Release 2.0.0 (branch ativa)</strong></summary>
@@ -62,12 +68,13 @@ Esta seção funciona como uma **mini árvore Git** para mostrar a progressão r
 **Branch:** `release/2.0.0`
 
 **Principais melhorias:**
+
 - ✅ **Migração completa para TypeScript** para garantir tipagem forte e segurança em toda a base de código.
 - ✅ **Adoção do React Hook Form** em todos os formulários (cadastro, login, criação, edição e exclusão de posts), melhorando validações e usabilidade.
 - ✅ **Substituição de Styled Components por SCSS Modules**, tornando a estilização mais modular e organizada.
 - ✅ **Refatoração geral de componentes e funções**, deixando o projeto dividido em camadas (hooks, contextos, componentes compartilhados, páginas).
 - ✅ Organização do código para facilitar a manutenção e colaboração futura.
-</details>
+      </details>
 
 ---
 
@@ -79,11 +86,11 @@ Esta seção funciona como uma **mini árvore Git** para mostrar a progressão r
 Objetivo: Implementar mecanismos de engajamento entre usuários para tornar a rede social mais interativa e dinâmica.
 
 - [ ] **Sistema de likes**  
-   → Botão de like com persistência no Firebase e animação de feedback
+       → Botão de like com persistência no Firebase e animação de feedback
 
 - [ ] **Comentários em posts**  
-   → Threads de comentários com nested replies e markdown básico
-</details>
+     → Threads de comentários com nested replies e markdown básico
+  </details>
 
 <details>
 <summary><strong>🖼 Perfil do usuário</strong></summary>
@@ -91,10 +98,10 @@ Objetivo: Implementar mecanismos de engajamento entre usuários para tornar a re
 Objetivo: Oferecer maior personalização e controle aos usuários sobre sua identidade na plataforma.
 
 - [ ] **Upload de foto de perfil**  
-   → Integração com Firebase Storage para upload e crop de imagens
+       → Integração com Firebase Storage para upload e crop de imagens
 
 - [ ] **Página de perfil personalizável**  
-   → Bio, links sociais e highlights de posts marcados
+       → Bio, links sociais e highlights de posts marcados
 
 </details>
 
@@ -104,11 +111,11 @@ Objetivo: Oferecer maior personalização e controle aos usuários sobre sua ide
 Objetivo: Aprimorar a base de código para garantir escalabilidade, manutenibilidade e performance.
 
 - [ ] **Migração para Redux Toolkit**  
-   → Substituição gradual do Context API para gestão de estado global
+       → Substituição gradual do Context API para gestão de estado global
 
 - [ ] **Testes unitários**  
-   → Cobertura com Jest + Testing Library para componentes críticos
-</details>
+     → Cobertura com Jest + Testing Library para componentes críticos
+  </details>
 
 <br/>
 
@@ -124,6 +131,5 @@ Objetivo: Aprimorar a base de código para garantir escalabilidade, manutenibili
   <img src="https://img.shields.io/badge/Context_API-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="Context API">
   <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint">
 </div>
-
 
 <br/>

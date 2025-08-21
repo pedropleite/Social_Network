@@ -1,5 +1,5 @@
-import { Link } from 'react-router';
-import styles from './CardPost.module.scss';
+import { Link } from "react-router";
+import styles from "./CardPost.module.scss";
 
 interface CardPostProps {
     post: {

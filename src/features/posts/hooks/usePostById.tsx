@@ -1,41 +1,41 @@
-import { useEffect, useState } from "react"
-import { db } from "../../../firebase/config"
-import { doc, getDoc } from "firebase/firestore"
-import type { Post } from "../types/Post"
-import { mapDocToPost } from "../utils/mapDocToPost"
-import { useAsyncStatus } from "../../shared/hooks/useAsyncStatus"
+import { useEffect, useState } from "react";
+import { db } from "../../../firebase/config";
+import { doc, getDoc } from "firebase/firestore";
+import type { Post } from "../types/Post";
+import { mapDocToPost } from "../utils/mapDocToPost";
+import { useAsyncStatus } from "../../shared/hooks/useAsyncStatus";
 
 interface UsePostByIdProps {
-    id: string
+    id: string;
 }
 export function usePostById({ id }: UsePostByIdProps) {
-    const [post, setPost] = useState<Post | null>(null)
-    const { loading, error, setLoading, setSuccess, setError } = useAsyncStatus()
+    const [post, setPost] = useState<Post | null>(null);
+    const { loading, error, setLoading, setSuccess, setError } = useAsyncStatus();
 
     useEffect(() => {
-        setLoading()
+        setLoading();
 
         async function fetchPost() {
             try {
-                const docRef = doc(db, "posts", id)
-                const docSnap = await getDoc(docRef)
+                const docRef = doc(db, "posts", id);
+                const docSnap = await getDoc(docRef);
 
                 if (docSnap.exists()) {
-                    const doc = mapDocToPost(docSnap)
-                    setPost(doc)
+                    const doc = mapDocToPost(docSnap);
+                    setPost(doc);
                 } else {
-                    setError("Document does not exist")
+                    setError("Document does not exist");
                 }
             } catch (error) {
-                const errorMessage = error instanceof Error ? error.message : "Unknown Error"
-                setError(errorMessage)
+                const errorMessage = error instanceof Error ? error.message : "Unknown Error";
+                setError(errorMessage);
             } finally {
-                setSuccess()
+                setSuccess();
             }
         }
 
-        fetchPost()
-    }, [id, setLoading, setSuccess, setError])
+        fetchPost();
+    }, [id, setLoading, setSuccess, setError]);
 
-    return { post, loading, error }
+    return { post, loading, error };
 }

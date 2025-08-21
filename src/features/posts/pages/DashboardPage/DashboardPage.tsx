@@ -1,4 +1,4 @@
-import styles from './DashboardPage.module.scss';
+import styles from "./DashboardPage.module.scss";
 
 import { Link } from "react-router";
 import { useAuthValue } from "../../../auth/hooks/useAuthValue";
@@ -8,13 +8,13 @@ import { LoadingLoop } from "../../../shared/components/LoadingLoop/LoadingLoop"
 
 export function DashboardPage() {
     const { user } = useAuthValue();
-    
+
     if (!user) throw new Error("User not found");
 
     const { deletePost, loading: loadingDelete } = usePostActions();
     const { posts, loading: loadingPosts } = usePosts({ uid: user.uid });
- 
-    if (loadingPosts) return <LoadingLoop />
+
+    if (loadingPosts) return <LoadingLoop />;
 
     if ((posts && posts.length === 0) || !posts) {
         return (
@@ -53,7 +53,7 @@ export function DashboardPage() {
                                         onClick={() => deletePost({ idPost: post.idPost, id: post.id })}
                                         className={`${styles.actionButton} ${styles.deleteButton}`}
                                     >
-                                        {loadingDelete ? 'Loading' : 'Delete'}
+                                        {loadingDelete ? "Loading" : "Delete"}
                                     </button>
                                 </div>
                             </div>

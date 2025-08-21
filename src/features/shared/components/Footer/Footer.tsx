@@ -1,9 +1,9 @@
-import { FacebookIcon } from '../Icons/FacebookIcon';
-import { InstagramIcon } from '../Icons/InstagramIcon';
-import { TwitterIcon } from '../Icons/TwitterIcon';
-import { WhatsAppIcon } from '../Icons/WhatsAppIcon';
+import { FacebookIcon } from "../Icons/FacebookIcon";
+import { InstagramIcon } from "../Icons/InstagramIcon";
+import { TwitterIcon } from "../Icons/TwitterIcon";
+import { WhatsAppIcon } from "../Icons/WhatsAppIcon";
 
-import styles from './Footer.module.scss';
+import styles from "./Footer.module.scss";
 
 export function Footer() {
     return (
@@ -12,7 +12,7 @@ export function Footer() {
 
             <span className={styles.logo}>
                 So
-                <div className={styles['rotated-c']}>c</div>
+                <div className={styles["rotated-c"]}>c</div>
                 ial
             </span>
 

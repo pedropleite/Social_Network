@@ -1,23 +1,19 @@
-import { useCallback, useReducer } from 'react';
+import { useCallback, useReducer } from "react";
 
 interface State {
     loading: boolean;
     error: string | null;
 }
 
-type Action =
-    | { type: 'LOADING' }
-    | { type: 'ERROR'; message: string }
-    | { type: 'SUCCESS' }
-    | { type: 'RESET' };
+type Action = { type: "LOADING" } | { type: "ERROR"; message: string } | { type: "SUCCESS" } | { type: "RESET" };
 
 function asyncStatusReducer(state: State, action: Action): State {
     switch (action.type) {
-        case 'LOADING':
+        case "LOADING":
             return { loading: true, error: null };
-        case 'ERROR':
+        case "ERROR":
             return { loading: false, error: action.message };
-        case 'SUCCESS':
+        case "SUCCESS":
             return { loading: false, error: null };
         default:
             return state;
@@ -25,27 +21,27 @@ function asyncStatusReducer(state: State, action: Action): State {
 }
 
 interface initialStatus {
-    loading?: boolean
-    error?: string | null
+    loading?: boolean;
+    error?: string | null;
 }
 
 export function useAsyncStatus(initialStatus: initialStatus = {}) {
     const [state, dispatch] = useReducer(asyncStatusReducer, {
         loading: initialStatus.loading ?? false,
-        error: initialStatus.error ?? null
+        error: initialStatus.error ?? null,
     });
 
     const setLoading = useCallback(function () {
-        dispatch({ type: "LOADING" })
-    }, [])
+        dispatch({ type: "LOADING" });
+    }, []);
 
     const setSuccess = useCallback(function () {
-        dispatch({ type: "SUCCESS" })
-    }, [])
+        dispatch({ type: "SUCCESS" });
+    }, []);
 
     const setError = useCallback(function (error: string) {
-        dispatch({ type: "ERROR", message: error })
-    }, [])
+        dispatch({ type: "ERROR", message: error });
+    }, []);
 
     return {
         ...state,

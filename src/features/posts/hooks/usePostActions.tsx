@@ -5,48 +5,48 @@ import { addDoc, collection, deleteDoc, doc, Timestamp, updateDoc } from "fireba
 import { useNavigate } from "react-router";
 
 interface Post {
-    title: string
-    content: string
-    tagsArray: string[]
-    uid: string
-    createdBy: string
-    idPost: string
+    title: string;
+    content: string;
+    tagsArray: string[];
+    uid: string;
+    createdBy: string;
+    idPost: string;
 }
 
 interface PostImage {
-    uid: string
-    data: File
-    idPost: string
+    uid: string;
+    data: File;
+    idPost: string;
 }
 
 interface DeletePostProps {
-    idPost: string
-    id: string
+    idPost: string;
+    id: string;
 }
 
 interface CreatePostProps {
-    post: Post
-    image: PostImage
+    post: Post;
+    image: PostImage;
 }
 
 interface UpdatePostProps {
-    id: string
-    post: Omit<Post, "createdBy" | "idPost" | "uid">
-    image: Omit<PostImage, "uid"> | undefined
+    id: string;
+    post: Omit<Post, "createdBy" | "idPost" | "uid">;
+    image: Omit<PostImage, "uid"> | undefined;
 }
 
-const docCollection = "posts"
+const docCollection = "posts";
 
 function getPostDoc(id: string) {
-    return doc(db, docCollection, id)
+    return doc(db, docCollection, id);
 }
 
 export function usePostActions() {
     const navigate = useNavigate();
-    const { loading, error, setLoading, setSuccess, setError } = useAsyncStatus()
+    const { loading, error, setLoading, setSuccess, setError } = useAsyncStatus();
 
     async function deletePost({ idPost, id }: DeletePostProps) {
-        setLoading()
+        setLoading();
 
         try {
             const imageRef = ref(storage, `images/${idPost}`);
@@ -54,15 +54,15 @@ export function usePostActions() {
             await deleteDoc(getPostDoc(id));
         } catch (error) {
             if (error instanceof Error) {
-                setError(error.message)
+                setError(error.message);
             }
         } finally {
-            setSuccess()
+            setSuccess();
         }
     }
 
     async function createPost({ post, image }: CreatePostProps) {
-        setLoading()
+        setLoading();
 
         try {
             const imageRef = ref(storage, `images/${image.idPost}`);
@@ -73,41 +73,41 @@ export function usePostActions() {
 
             await addDoc(collection(db, docCollection), newPost);
 
-            navigate('/');
+            navigate("/");
         } catch (error) {
             if (error instanceof Error) {
-                setError(error.message)
+                setError(error.message);
             }
         } finally {
-            setSuccess()
+            setSuccess();
         }
     }
 
     async function updatePost({ id, post, image }: UpdatePostProps) {
-        setLoading()
+        setLoading();
 
         try {
-            const newPost: typeof post & { linkImage?: string } = { ...post }
+            const newPost: typeof post & { linkImage?: string } = { ...post };
 
             if (image) {
                 const imageRef = ref(storage, `images/${image.idPost}`);
                 await uploadBytes(imageRef, image.data);
 
                 const url = await getDownloadURL(imageRef);
-                newPost.linkImage = url
+                newPost.linkImage = url;
             }
-            
+
             await updateDoc(getPostDoc(id), newPost);
 
-            navigate('/dashboard');
+            navigate("/dashboard");
         } catch (error) {
             if (error instanceof Error) {
-                setError(error.message)
+                setError(error.message);
             }
         } finally {
-            setSuccess()
+            setSuccess();
         }
     }
 
-    return { deletePost, createPost, updatePost, loading, error }
+    return { deletePost, createPost, updatePost, loading, error };
 }

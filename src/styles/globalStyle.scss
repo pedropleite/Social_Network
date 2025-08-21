@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 main {
-  min-height: 70dvh;
+    min-height: 70dvh;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 
 input::placeholder,
 textarea::placeholder {
-    color: #AAA;
+    color: #aaa;
 }
 
 input:focus,

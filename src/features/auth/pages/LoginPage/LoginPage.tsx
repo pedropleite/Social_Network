@@ -1,25 +1,29 @@
-import formSignImg2 from '../../../../assets/signUp.jpg';
-import { Input } from '../../components/Input/Input';
-import { useAuthentication } from '../../hooks/useAuthentication';
-import { useForm, type SubmitHandler } from "react-hook-form"
+import formSignImg2 from "../../../../assets/signUp.jpg";
+import { Input } from "../../components/Input/Input";
+import { useAuthentication } from "../../hooks/useAuthentication";
+import { useForm, type SubmitHandler } from "react-hook-form";
 
 interface Inputs {
-    email: string
-    password: string
+    email: string;
+    password: string;
 }
 
 export function LoginPage() {
     const { login, error: authError, loading } = useAuthentication();
-    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        const user = { email: data.email, password: data.password, };
+        const user = { email: data.email, password: data.password };
 
         login(user);
-    }
+    };
 
     return (
-        <section className='containerDefault'>
+        <section className="containerDefault">
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h1>Login to post</h1>
@@ -43,12 +47,12 @@ export function LoginPage() {
                     />
                     {!loading && <button>Login</button>}
                     {loading && <button disabled>Loading...</button>}
-                    {authError && <p className='errorDefault'>{authError}</p>}
+                    {authError && <p className="errorDefault">{authError}</p>}
                 </form>
                 <section>
-                    <img src={formSignImg2} alt={'Descriptive'} />
+                    <img src={formSignImg2} alt={"Descriptive"} />
                 </section>
             </div>
         </section>
     );
-};
+}

@@ -1,39 +1,44 @@
-import formSignImg2 from '../../../../assets/signUp.jpg';
-import { Input } from '../../components/Input/Input';
-import { useAuthentication } from '../../hooks/useAuthentication';
-import { useForm, type SubmitHandler } from "react-hook-form"
+import formSignImg2 from "../../../../assets/signUp.jpg";
+import { Input } from "../../components/Input/Input";
+import { useAuthentication } from "../../hooks/useAuthentication";
+import { useForm, type SubmitHandler } from "react-hook-form";
 
 export interface Inputs {
-    name: string
-    email: string
-    password: string
-    confirmPassword: string
+    name: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
 }
 
 export function RegisterPage() {
     const { createUser, error: authError, loading } = useAuthentication();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>()
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+    } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         const user = {
             displayName: data.name,
             email: data.email,
-            password: data.password
-        }
+            password: data.password,
+        };
 
-        createUser(user)
-    }
+        createUser(user);
+    };
 
     function validateConfirmPassword(value: string) {
-        const passwordValue = watch("password")
+        const passwordValue = watch("password");
 
         if (value !== passwordValue) return "Passwords do not match";
 
-        return undefined
+        return undefined;
     }
 
     return (
-        <section className='containerDefault'>
+        <section className="containerDefault">
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h1>Register to post</h1>
@@ -76,7 +81,7 @@ export function RegisterPage() {
 
                     {!loading && <button>Register</button>}
                     {loading && <button disabled>Loading...</button>}
-                    {authError && <p className='errorDefault'>{authError}</p>}
+                    {authError && <p className="errorDefault">{authError}</p>}
                 </form>
                 <section>
                     <img src={formSignImg2} alt="Registered" />
@@ -84,4 +89,4 @@ export function RegisterPage() {
             </div>
         </section>
     );
-};
+}

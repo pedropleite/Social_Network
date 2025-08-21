@@ -1,4 +1,4 @@
-import styles from "./EditPostPage.module.scss"
+import styles from "./EditPostPage.module.scss";
 
 import { useNavigate, useParams } from "react-router";
 import { usePostById } from "../../hooks/usePostById";
@@ -11,48 +11,54 @@ import { validateImage } from "../../utils/validateImage";
 import { useEffect } from "react";
 
 interface Inputs {
-    title: string
-    image: File[]
-    content: string
-    tags: string
+    title: string;
+    image: File[];
+    content: string;
+    tags: string;
 }
 
 export function EditPostPage() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const { id } = useParams<string>();
 
     if (!id) {
-        navigate("/")
+        navigate("/");
     }
 
-    const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<Inputs>()
+    const {
+        register,
+        handleSubmit,
+        setValue,
+        watch,
+        formState: { errors },
+    } = useForm<Inputs>();
     const { user } = useAuthValue();
-    const { post, loading: loadingPost, error: errorPost } = usePostById({ id: id ?? "" })
+    const { post, loading: loadingPost, error: errorPost } = usePostById({ id: id ?? "" });
     const { updatePost, loading: loadingPostUpdate, error: errorPostUpdate } = usePostActions();
 
     useEffect(() => {
         if (post) {
-            setValue("title", post.title)
-            setValue("content", post.content)
+            setValue("title", post.title);
+            setValue("content", post.content);
 
-            const textTags = post.tagsArray.join(', ');
-            setValue("tags", textTags)
+            const textTags = post.tagsArray.join(", ");
+            setValue("tags", textTags);
         }
     }, [setValue, post]);
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        if (!user) return
+        if (!user) return;
 
-        const tags = data.tags
-        const tagsArray = tags.split(',').map((tag) => tag.trim().toLowerCase());
+        const tags = data.tags;
+        const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
 
-        const imageValue = watch("image")
-        let imagePostData
+        const imageValue = watch("image");
+        let imagePostData;
 
         if (imageValue && imageValue.length > 0 && imageValue[0]) {
             imagePostData = {
                 data: imageValue[0],
-                idPost: post?.idPost ?? ""
+                idPost: post?.idPost ?? "",
             };
         }
 
@@ -74,7 +80,7 @@ export function EditPostPage() {
         return true;
     }
 
-    if (loadingPost) return <LoadingLoop />
+    if (loadingPost) return <LoadingLoop />;
 
     return (
         <div className={`containerDefault ${styles.container}`}>
@@ -127,7 +133,11 @@ export function EditPostPage() {
                     />
 
                     {!loadingPostUpdate && <button className={styles.button}>Update</button>}
-                    {loadingPostUpdate && <button className={styles.button} disabled>Loading...</button>}
+                    {loadingPostUpdate && (
+                        <button className={styles.button} disabled>
+                            Loading...
+                        </button>
+                    )}
 
                     {errorPostUpdate && <p className={styles.error}>{errorPostUpdate}</p>}
                     {errorPost && <p className={styles.error}>{errorPost}</p>}
@@ -135,4 +145,4 @@ export function EditPostPage() {
             </div>
         </div>
     );
-};
+}

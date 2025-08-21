@@ -1,6 +1,6 @@
-import "./LoadingLoop.module.scss"
+import "./LoadingLoop.module.scss";
 
-import styles from './LoadingLoop.module.scss';
+import styles from "./LoadingLoop.module.scss";
 
 export function LoadingLoop() {
     return (
@@ -9,4 +9,3 @@ export function LoadingLoop() {
         </div>
     );
 }
-

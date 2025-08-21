@@ -3,9 +3,9 @@ export function validateImage(image: File[]) {
         return "IMAGE is required";
     }
 
-    if (!image[0].type.includes('jpg') && !image[0].type.includes('png') && !image[0].type.includes('jpeg')) {
-        return "Only jpg/png/jpeg images are allowed"
+    if (!image[0].type.includes("jpg") && !image[0].type.includes("png") && !image[0].type.includes("jpeg")) {
+        return "Only jpg/png/jpeg images are allowed";
     }
 
-    return undefined
+    return undefined;
 }

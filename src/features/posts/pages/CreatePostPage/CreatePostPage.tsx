@@ -1,28 +1,32 @@
-import styles from './CreatePostPage.module.scss';
+import styles from "./CreatePostPage.module.scss";
 
-import { usePostActions } from '../../hooks/usePostActions';
-import { useAuthValue } from '../../../auth/hooks/useAuthValue';
-import { useForm, type SubmitHandler } from 'react-hook-form';
-import { Input } from '../../../auth/components/Input/Input';
-import { validateImage } from '../../utils/validateImage';
+import { usePostActions } from "../../hooks/usePostActions";
+import { useAuthValue } from "../../../auth/hooks/useAuthValue";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import { Input } from "../../../auth/components/Input/Input";
+import { validateImage } from "../../utils/validateImage";
 
 interface Inputs {
-    title: string
-    image: File[]
-    content: string
-    tags: string
+    title: string;
+    image: File[];
+    content: string;
+    tags: string;
 }
 
 export function CreatePostPage() {
     const { user } = useAuthValue();
     const { createPost, loading, error: createError } = usePostActions();
-    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        if (!user) return
+        if (!user) return;
 
-        const tags = data.tags
-        const tagsArray = tags.split(',').map((tag) => tag.trim().toLowerCase());
+        const tags = data.tags;
+        const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
         const idPost = crypto.randomUUID();
 
         const postData = {
@@ -46,7 +50,7 @@ export function CreatePostPage() {
         };
 
         createPost(payload);
-    }
+    };
 
     return (
         <section className={`containerDefault ${styles.container}`}>
@@ -88,10 +92,14 @@ export function CreatePostPage() {
                         required
                     />
                     {!loading && <button className={styles.button}>Create</button>}
-                    {loading && <button className={styles.button} disabled>Loading...</button>}
-                    {createError && <p className='errorDefault'>{createError}</p>}
+                    {loading && (
+                        <button className={styles.button} disabled>
+                            Loading...
+                        </button>
+                    )}
+                    {createError && <p className="errorDefault">{createError}</p>}
                 </form>
             </div>
         </section>
     );
-};
+}

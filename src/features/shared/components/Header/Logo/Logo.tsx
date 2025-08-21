@@ -17,5 +17,5 @@ export function Logo() {
                 </div>
             </NavLink>
         </div>
-    )
+    );
 }

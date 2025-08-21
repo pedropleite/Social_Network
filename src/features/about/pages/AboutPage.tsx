@@ -11,7 +11,8 @@ export function AboutPage() {
                     This project consists of a blog ( CRUD ) made with React in Front-End and Firebase as database.
                 </p>
                 <p className={styles.paragraphStrong}>
-                    If you liked it, don't forget to visit my Linkedin and GitHub to know more about what I do, thank you.
+                    If you liked it, don't forget to visit my Linkedin and GitHub to know more about what I do, thank
+                    you.
                 </p>
                 <a
                     href="https://www.linkedin.com/in/pedro-paulo-leite/"
@@ -32,4 +33,4 @@ export function AboutPage() {
             </div>
         </div>
     );
-};
+}

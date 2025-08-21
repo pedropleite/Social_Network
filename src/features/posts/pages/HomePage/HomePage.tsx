@@ -1,16 +1,16 @@
-import { Link, useSearchParams } from 'react-router';
-import { usePosts } from '../../hooks/usePosts';
-import React, { useRef } from 'react';
+import { Link, useSearchParams } from "react-router";
+import { usePosts } from "../../hooks/usePosts";
+import React, { useRef } from "react";
 
-import { LoadingLoop } from '../../../shared/components/LoadingLoop/LoadingLoop';
+import { LoadingLoop } from "../../../shared/components/LoadingLoop/LoadingLoop";
 import { SearchIcon } from "../../../shared/components/Icons/SearchIcon";
-import { CardPost } from '../../components/CardPost/CardPost';
+import { CardPost } from "../../components/CardPost/CardPost";
 
-import styles from './HomePage.module.scss';
+import styles from "./HomePage.module.scss";
 
 export function HomePage() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const search = searchParams.get("search") || null
+    const search = searchParams.get("search") || null;
     const searchInput = useRef<HTMLInputElement>(null);
     const { posts, loading, error } = usePosts({ search });
 
@@ -19,9 +19,9 @@ export function HomePage() {
 
         const value = searchInput.current?.value;
 
-        if (!value || value === search) return
+        if (!value || value === search) return;
 
-        setSearchParams({ search: value })
+        setSearchParams({ search: value });
     };
 
     if (loading) return <LoadingLoop />;
@@ -37,7 +37,9 @@ export function HomePage() {
                     <h1>Recent Posts</h1>
                     <form onSubmit={handleSubmit} className={styles.searchForm}>
                         <input ref={searchInput} type="text" placeholder="Search by tags..." />
-                        <button><SearchIcon /></button>
+                        <button>
+                            <SearchIcon />
+                        </button>
                     </form>
                 </section>
             )}
@@ -54,9 +56,7 @@ export function HomePage() {
                     </div>
                 )}
 
-                {hasPosts && posts.map((post) => (
-                    <CardPost key={post.id} post={post} />
-                ))}
+                {hasPosts && posts.map((post) => <CardPost key={post.id} post={post} />)}
 
                 {!hasPosts && !loading && (
                     <div>

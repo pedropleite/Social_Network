@@ -1,14 +1,14 @@
-import type { DocumentSnapshot } from "firebase/firestore"
-import type { Post } from "../types/Post"
+import type { DocumentSnapshot } from "firebase/firestore";
+import type { Post } from "../types/Post";
 
 export function mapDocToPost(doc: DocumentSnapshot) {
-    const data = doc.data()
+    const data = doc.data();
 
     if (!data) {
-        throw new Error("Document is empty")
+        throw new Error("Document is empty");
     }
 
-    return ({
+    return {
         id: doc.id,
         title: data.title,
         linkImage: data.linkImage,
@@ -17,5 +17,5 @@ export function mapDocToPost(doc: DocumentSnapshot) {
         tagsArray: data.tagsArray,
         idPost: data.idPost,
         uid: data.uid,
-    } satisfies Post)
+    } satisfies Post;
 }

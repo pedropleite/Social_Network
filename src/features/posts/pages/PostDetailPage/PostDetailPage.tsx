@@ -1,20 +1,20 @@
-import styles from './PostDetailPage.module.scss';
+import styles from "./PostDetailPage.module.scss";
 
-import { LoadingLoop } from '../../../shared/components/LoadingLoop/LoadingLoop';
-import { Link, useNavigate, useParams } from 'react-router';
-import { usePostById } from '../../hooks/usePostById';
+import { LoadingLoop } from "../../../shared/components/LoadingLoop/LoadingLoop";
+import { Link, useNavigate, useParams } from "react-router";
+import { usePostById } from "../../hooks/usePostById";
 
 export function PostDetailPage() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const { id: postId } = useParams();
 
     if (!postId) {
-        navigate("/")
+        navigate("/");
     }
 
-    const { post, loading, error } = usePostById({ id: postId ?? "" })
+    const { post, loading, error } = usePostById({ id: postId ?? "" });
 
-    if (loading) return <LoadingLoop />
+    if (loading) return <LoadingLoop />;
     if (error) return <p className={styles.error}>{error}</p>;
 
     return (
@@ -31,7 +31,7 @@ export function PostDetailPage() {
                         {post.tagsArray.map((tag) => (
                             <span key={tag}>
                                 <span>#</span>
-                                {tag + ' '}
+                                {tag + " "}
                             </span>
                         ))}
                     </div>
@@ -42,4 +42,4 @@ export function PostDetailPage() {
             )}
         </section>
     );
-};
+}

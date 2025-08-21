@@ -18,32 +18,65 @@ export const routes = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <HomePage />
+                element: <HomePage />,
             },
             {
                 path: "about",
-                element: <AboutPage />
+                element: <AboutPage />,
             },
             {
                 path: "login",
-                element: <RouteWrapper isPrivate={false}><LoginPage /></RouteWrapper>
+                element: (
+                    <RouteWrapper isPrivate={false}>
+                        <LoginPage />
+                    </RouteWrapper>
+                ),
             },
             {
                 path: "register",
-                element: <RouteWrapper isPrivate={false}><RegisterPage /></RouteWrapper>
+                element: (
+                    <RouteWrapper isPrivate={false}>
+                        <RegisterPage />
+                    </RouteWrapper>
+                ),
             },
             {
                 path: "post",
                 children: [
-                    { path: ":id", element: <RouteWrapper isPrivate={true}><PostDetailPage /></RouteWrapper> },
-                    { path: ":id/edit", element: <RouteWrapper isPrivate={true}><EditPostPage /></RouteWrapper> },
-                    { path: "create", element: <RouteWrapper isPrivate={true}><CreatePostPage /></RouteWrapper> }
-                ]
+                    {
+                        path: ":id",
+                        element: (
+                            <RouteWrapper isPrivate={true}>
+                                <PostDetailPage />
+                            </RouteWrapper>
+                        ),
+                    },
+                    {
+                        path: ":id/edit",
+                        element: (
+                            <RouteWrapper isPrivate={true}>
+                                <EditPostPage />
+                            </RouteWrapper>
+                        ),
+                    },
+                    {
+                        path: "create",
+                        element: (
+                            <RouteWrapper isPrivate={true}>
+                                <CreatePostPage />
+                            </RouteWrapper>
+                        ),
+                    },
+                ],
             },
             {
                 path: "dashboard",
-                element: <RouteWrapper isPrivate={true}><DashboardPage /></RouteWrapper>
-            }
+                element: (
+                    <RouteWrapper isPrivate={true}>
+                        <DashboardPage />
+                    </RouteWrapper>
+                ),
+            },
         ],
     },
 ]);

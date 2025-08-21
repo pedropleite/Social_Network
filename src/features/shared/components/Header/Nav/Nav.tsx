@@ -1,20 +1,20 @@
-import styles from './Nav.module.scss';
+import styles from "./Nav.module.scss";
 
-import { NavLink } from 'react-router';
-import { useAuthValue } from '../../../../auth/hooks/useAuthValue';
+import { NavLink } from "react-router";
+import { useAuthValue } from "../../../../auth/hooks/useAuthValue";
 
 // { url: '/post/create', label: 'New Post', onlyAuth: true },
 // { url: '/dashboard', label: 'Dashboard', onlyAuth: true },
 
 interface Link {
-    url: string
-    label: string
-    onlyAuth?: boolean
+    url: string;
+    label: string;
+    onlyAuth?: boolean;
 }
 
 const links: Link[] = [
-    { url: '/', label: 'Explorar' },
-    { url: '/sobre', label: 'Sobre' },
+    { url: "/", label: "Explorar" },
+    { url: "/sobre", label: "Sobre" },
 ];
 
 export function Nav() {
@@ -28,7 +28,10 @@ export function Nav() {
 
                     return (
                         <li key={label} className={styles.item}>
-                            <NavLink to={url} className={({ isActive }) =>`${styles.button} ${isActive ? styles.active : ''}`}>
+                            <NavLink
+                                to={url}
+                                className={({ isActive }) => `${styles.button} ${isActive ? styles.active : ""}`}
+                            >
                                 {label}
                                 <div className={styles.underlineEffect} />
                             </NavLink>
@@ -38,4 +41,4 @@ export function Nav() {
             </ul>
         </div>
     );
-};
+}
