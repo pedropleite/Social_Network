@@ -3,13 +3,13 @@ import styles from "./Actions.module.scss";
 import { useState, useEffect } from "react";
 import { useAuthValue } from "../../../../auth/hooks/useAuthValue";
 import { NavLink } from "react-router";
+
 import { SunIcon } from "../../Icons/SunIcon";
 import { MoonIcon } from "../../Icons/MoonIcon";
-import { useAuthentication } from "../../../../auth/hooks/useAuthentication";
+import { UserIcon } from "../../Icons/UserIcon";
 
 export function Actions() {
     const { user } = useAuthValue();
-    const { logout } = useAuthentication();
 
     const themeLocalStorage = localStorage.getItem("theme") === "dark";
     const [isOn, setIsOn] = useState(themeLocalStorage);
@@ -19,6 +19,12 @@ export function Actions() {
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme);
     }, [isOn]);
+
+    let userNameFirstLetter;
+
+    if (user?.displayName) {
+        userNameFirstLetter = user.displayName.split(" ")[0][0].toUpperCase();
+    }
 
     return (
         <div className={styles.actions}>
@@ -48,14 +54,11 @@ export function Actions() {
 
             {user && (
                 <ul className={styles.loggedButtons}>
-                    <li className={styles.user}>
-                        <button>
-                            <span>Q</span>
-                            <span>Teste</span>
+                    <li>
+                        <button className={styles.user}>
+                            <span>{userNameFirstLetter}</span>
+                            <UserIcon />
                         </button>
-                    </li>
-                    <li className={styles.logout}>
-                        <button onClick={logout}>Sair</button>
                     </li>
                 </ul>
             )}

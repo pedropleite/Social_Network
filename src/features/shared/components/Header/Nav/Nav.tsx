@@ -3,18 +3,17 @@ import styles from "./Nav.module.scss";
 import { NavLink } from "react-router";
 import { useAuthValue } from "../../../../auth/hooks/useAuthValue";
 
-// { url: '/post/create', label: 'New Post', onlyAuth: true },
-// { url: '/dashboard', label: 'Dashboard', onlyAuth: true },
-
 interface Link {
     url: string;
     label: string;
-    onlyAuth?: boolean;
+    onlyAuth?: boolean | null;
 }
 
 const links: Link[] = [
-    { url: "/", label: "Explorar" },
-    { url: "/sobre", label: "Sobre" },
+    { url: "/sobre", label: "Meu feed", onlyAuth: true },
+    { url: "/sobre", label: "Meus momentos", onlyAuth: true },
+    { url: "/", label: "Explorar", onlyAuth: false },
+    { url: "/sobre", label: "Sobre", onlyAuth: null },
 ];
 
 export function Nav() {
@@ -24,6 +23,7 @@ export function Nav() {
         <div>
             <ul className={`${styles.Nav}`}>
                 {links.map(({ url, label, onlyAuth = false }) => {
+                    console.log(label, onlyAuth);
                     if ((onlyAuth === true && !user) || (onlyAuth === false && user)) return null;
 
                     return (
