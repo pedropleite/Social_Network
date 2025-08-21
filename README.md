@@ -58,7 +58,7 @@ Esta seção funciona como uma **mini árvore Git** para mostrar a progressão r
 - Uso de **Firebase** para autenticação e armazenamento de posts.
 - Estilização com **Styled Components**.
 - Implementação do tema dark/light com persistência.
-      </details>
+  </details>
 
 <details>
 <summary><strong>🌿 Release 2.0.0 (branch ativa)</strong></summary>
@@ -74,7 +74,7 @@ Esta seção funciona como uma **mini árvore Git** para mostrar a progressão r
 - ✅ **Substituição de Styled Components por SCSS Modules**, tornando a estilização mais modular e organizada.
 - ✅ **Refatoração geral de componentes e funções**, deixando o projeto dividido em camadas (hooks, contextos, componentes compartilhados, páginas).
 - ✅ Organização do código para facilitar a manutenção e colaboração futura.
-      </details>
+  </details>
 
 ---
 

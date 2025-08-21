@@ -1,4 +1,4 @@
-import { AuthProvider } from "./features/auth/context/AuthContext";
+import { AuthProvider } from "./features/auth/provider/AuthProvider";
 import { Header } from "./features/shared/components/Header/Header";
 import { Footer } from "./features/shared/components/Footer/Footer";
 import { Outlet } from "react-router";

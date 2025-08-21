@@ -46,13 +46,19 @@ export function Actions() {
                 </ul>
             )}
 
-            {/* {user && (
-                <li className={styles.item}>
-                    <button onClick={logout} className={styles.logoutButton}>
-                        Logout
-                    </button>
-                </li>
-            )} */}
+            {user && (
+                <ul className={styles.loggedButtons}>
+                    <li className={styles.user}>
+                        <button>
+                            <span>Q</span>
+                            <span>Teste</span>
+                        </button>
+                    </li>
+                    <li className={styles.logout}>
+                        <button onClick={logout}>Sair</button>
+                    </li>
+                </ul>
+            )}
         </div>
     );
 }

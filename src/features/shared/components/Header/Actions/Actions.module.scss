@@ -65,10 +65,10 @@
         }
     }
 
-    .authButtons {
+    .authButtons,
+    .loggedButtons {
         list-style: none;
         display: flex;
-        gap: 0.5rem;
 
         li {
             display: flex;
@@ -80,11 +80,14 @@
                 font-weight: 600;
                 border-radius: 0.5rem;
                 transition: all 0.2s ease;
-                text-decoration: none;
                 border: 1px solid transparent;
                 cursor: pointer;
             }
         }
+    }
+
+    .authButtons {
+        gap: 0.5rem;
 
         .login {
             a {
@@ -117,5 +120,9 @@
                 }
             }
         }
+    }
+
+    .loggedButtons {
+        gap: 0.5rem;
     }
 }
