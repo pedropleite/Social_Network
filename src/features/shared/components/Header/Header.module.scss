@@ -1,21 +1,21 @@
+@use "/src/styles/globalStyle.scss" as *;
+
 .container {
     position: sticky;
     top: 0;
     background-color: var(--background);
     display: flex;
     justify-content: center;
-    margin-bottom: 1px solid #707070;
     padding: 1rem;
-    border-bottom: 1px solid #0000001a;
+    border-bottom: 2px solid #d4a57433;
 
     [data-theme="dark"] & {
         border-color: #262626;
     }
 
     .header {
+        @include containerDefault;
         position: relative;
-        max-width: 80rem;
-        width: 100%;
         display: grid;
         grid-template-columns: 1fr auto 1fr;
         align-items: center;

@@ -1,29 +1,65 @@
-import { FacebookIcon } from "../Icons/FacebookIcon";
-import { InstagramIcon } from "../Icons/InstagramIcon";
-import { TwitterIcon } from "../Icons/TwitterIcon";
-import { WhatsAppIcon } from "../Icons/WhatsAppIcon";
+import { NavLink } from "react-router";
+
+import { UsersIcon } from "../Icons/UsersIcon";
 
 import styles from "./Footer.module.scss";
+import { GithubIcon } from "../Icons/GithubIcon";
+import { LinkedinIcon } from "../Icons/LinkedinIcon";
+import { EmailIcon } from "../Icons/EmailIcon";
+import { LocationIcon } from "../Icons/LocationIcon";
 
 export function Footer() {
     return (
-        <footer className={styles.footer}>
-            <h3 className={styles.title}>Write about what you are interested in</h3>
-
-            <span className={styles.logo}>
-                So
-                <div className={styles["rotated-c"]}>c</div>
-                ial
-            </span>
-
-            <div className={styles.icons}>
-                <FacebookIcon />
-                <InstagramIcon />
-                <TwitterIcon />
-                <WhatsAppIcon />
+        <footer className={styles.container}>
+            <div className={styles.footer}>
+                <section>
+                    <div className={styles.about}>
+                        <div className={styles.logo}>
+                            <div>
+                                <div className={styles.icon}>
+                                    <span></span>
+                                    <UsersIcon />
+                                </div>
+                                <div className={styles.title}>
+                                    <h2>Momentos</h2>
+                                    <span>Compartilhe sua vida</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            Uma plataforma para compartilhar histórias e se conectar com pessoas. Valorize autenticidade
+                            e momentos genuínos.
+                        </p>
+                        <p>
+                            <LocationIcon /> Desenvolvido no Brasil por Pedro Paulo
+                        </p>
+                    </div>
+                    <div className={styles.contact}>
+                        <h3>Contato</h3>
+                        <p>
+                            Entre em contato conosco através das redes sociais ou por e-mail. Sua opinião é importante
+                            para nós.
+                        </p>
+                        <div>
+                            <NavLink to="https://github.com/pedropleite">
+                                <GithubIcon />
+                                Github
+                            </NavLink>
+                            <NavLink to="https://www.linkedin.com/in/pedro-paulo-leite/">
+                                <LinkedinIcon />
+                                Linkedin
+                            </NavLink>
+                            <NavLink to="mailto:pedroaksson@gmail.com">
+                                <EmailIcon />
+                                E-mail
+                            </NavLink>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>© {new Date().getFullYear()} Momentos</p>
+                </section>
             </div>
-
-            <p className={styles.copy}>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
         </footer>
     );
 }
