@@ -30,9 +30,10 @@ export function Footer() {
                             Uma plataforma para compartilhar histórias e se conectar com pessoas. Valorize autenticidade
                             e momentos genuínos.
                         </p>
-                        <p>
-                            <LocationIcon /> Desenvolvido no Brasil por Pedro Paulo
-                        </p>
+                        <div>
+                            <LocationIcon />
+                            <p>Desenvolvido no Brasil por Pedro Paulo</p>
+                        </div>
                     </div>
                     <div className={styles.contact}>
                         <h3>Contato</h3>
