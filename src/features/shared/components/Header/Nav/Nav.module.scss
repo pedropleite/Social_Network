@@ -1,50 +1,79 @@
-.Nav {
-    list-style: none;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
+.container {
+    padding-left: 1rem;
 
-    .open {
-        transform: translateX(0);
+    &>span {
+        font-size: 0.8rem;
+        color: var(--muted-foreground);
+        font-weight: 600;
     }
 
-    .item {
-        .button {
-            color: var(--secondary);
-            gap: 0.5rem;
-            position: relative;
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border-radius: 0.5rem;
-            white-space: nowrap;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
+    .nav {
+        margin-top: 0.5rem;
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
 
-            .underlineEffect {
-                content: "";
-                position: absolute;
-                bottom: 10%;
-                left: 50%;
-                width: 0;
-                height: 2px;
-                background: var(--warm-orange);
-                transition: all 0.3s ease;
-            }
+        .item {
+            .button {
+                color: var(--secondary);
+                gap: 0.5rem;
+                position: relative;
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                border-radius: 0.5rem;
+                white-space: nowrap;
+                transition: all 0.2s ease;
+                border: 1px solid transparent;
 
-            &:hover:not(.active) {
-                background-color: #d4a5741a;
 
-                .underlineEffect {
-                    left: 10%;
-                    width: 80%;
+
+                &.active {
+                    background-color: #d4a5741a;
+                    color: var(--earth-brown);
+                    pointer-events: none;
                 }
             }
+        }
 
-            &.active {
-                background-color: #d4a5741a;
-                color: var(--earth-brown);
-                pointer-events: none;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            gap: 0.2rem;
+
+            .item {
+                .button {
+                    display: flex;
+                    width: 100%;
+
+                    &:hover:not(.active) {
+                        background-color: #d4a5741a;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .item .button {
+                .underlineEffect {
+                    content: "";
+                    position: absolute;
+                    bottom: 10%;
+                    left: 50%;
+                    width: 0;
+                    height: 2px;
+                    background: var(--warm-orange);
+                    transition: all 0.3s ease;
+                }
+
+                &:hover:not(.active) {
+                    background-color: #d4a5741a;
+
+                    .underlineEffect {
+                        left: 10%;
+                        width: 80%;
+                    }
+                }
             }
         }
     }

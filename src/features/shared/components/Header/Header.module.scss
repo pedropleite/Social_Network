@@ -31,5 +31,21 @@
         &> :nth-child(3) {
             justify-self: end;
         }
+
+        @media (max-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+
+            .menuButton {
+                background: unset;
+                border: unset;
+                cursor: pointer;
+
+                svg {
+                    height: 1.5rem;
+                    fill: var(--muted-foreground);
+                }
+            }
+        }
     }
 }

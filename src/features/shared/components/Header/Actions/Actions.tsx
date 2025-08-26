@@ -9,7 +9,11 @@ import { SunIcon } from "../../Icons/SunIcon";
 import { MoonIcon } from "../../Icons/MoonIcon";
 import { UserIcon } from "../../Icons/UserIcon";
 
-export function Actions() {
+interface ActionsProps {
+    mobile?: boolean;
+}
+
+export function Actions({ mobile = false }: ActionsProps) {
     const { user } = useAuthValue();
 
     const themeLocalStorage = localStorage.getItem("theme") === "dark";
@@ -34,8 +38,10 @@ export function Actions() {
     return (
         <>
             <div className={styles.actions}>
+                {mobile && <span>Preferências</span>}
                 <div className={styles.switch}>
                     <SunIcon />
+                    {mobile && <span>Tema</span>}
                     <button
                         type="button"
                         role="switch"
@@ -58,7 +64,7 @@ export function Actions() {
                     </ul>
                 )}
 
-                {user && (
+                {user && !mobile && (
                     <>
                         <ul className={styles.loggedButtons}>
                             <li>
@@ -71,7 +77,7 @@ export function Actions() {
                     </>
                 )}
             </div>
-            {user && <UserDropdown name={userName ?? ""} email={userEmail ?? ""} isOpen={isOpen} />}
+            {user && <UserDropdown name={userName ?? ""} email={userEmail ?? ""} isOpen={isOpen} mobile={mobile} />}
         </>
     );
 }

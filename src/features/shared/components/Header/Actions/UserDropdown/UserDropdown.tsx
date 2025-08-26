@@ -9,13 +9,15 @@ interface UserDropdownProps {
     name: string;
     email: string;
     isOpen: boolean;
+    mobile: boolean;
 }
 
-export function UserDropdown({ name, email, isOpen }: UserDropdownProps) {
+export function UserDropdown({ name, email, isOpen, mobile = false }: UserDropdownProps) {
     const { logout } = useAuthentication();
 
     return (
         <div className={styles.dropdown} data-state={isOpen ? "open" : "closed"} aria-hidden={!isOpen}>
+            {mobile && <span>Conta</span>}
             <div className={styles.user}>
                 <p>{name}</p>
                 <p>{email}</p>
@@ -26,6 +28,7 @@ export function UserDropdown({ name, email, isOpen }: UserDropdownProps) {
                     Configurações
                 </NavLink>
             </div>
+
             <div className={styles.logout}>
                 <button onClick={logout}>
                     <LogoutIcon />

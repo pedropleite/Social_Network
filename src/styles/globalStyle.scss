@@ -5,6 +5,10 @@
     font-family: "Montserrat", sans-serif !important;
 }
 
+#root {
+    position: relative;
+}
+
 main {
     min-height: 70dvh;
 }
@@ -31,8 +35,8 @@ a {
 }
 
 @mixin containerDefault {
-  max-width: 80rem;
-  width: 100%;
+    max-width: 80rem;
+    width: 100%;
 }
 
 .errorDefault {
@@ -42,4 +46,12 @@ a {
     border: 1px solid #f5c6cb;
     padding: 0.3rem;
     border-radius: 5px;
+}
+
+.borderDefault {
+    border: 1px solid #d4a57430;
+
+    &.order-2 {
+        order: 2;
+    }
 }

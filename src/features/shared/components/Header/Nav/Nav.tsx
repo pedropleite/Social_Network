@@ -16,14 +16,18 @@ const links: Link[] = [
     { url: "/sobre", label: "Sobre", onlyAuth: null },
 ];
 
-export function Nav() {
+interface NavProps {
+    mobile?: boolean;
+}
+
+export function Nav({ mobile = false }: NavProps) {
     const { user } = useAuthValue();
 
     return (
-        <div>
-            <ul className={`${styles.Nav}`}>
+        <nav className={styles.container}>
+            {mobile && <span>Navegação</span>}
+            <ul className={`${styles.nav}`}>
                 {links.map(({ url, label, onlyAuth = false }) => {
-                    console.log(label, onlyAuth);
                     if ((onlyAuth === true && !user) || (onlyAuth === false && user)) return null;
 
                     return (
@@ -39,6 +43,6 @@ export function Nav() {
                     );
                 })}
             </ul>
-        </div>
+        </nav>
     );
 }

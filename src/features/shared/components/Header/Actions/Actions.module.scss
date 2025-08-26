@@ -156,4 +156,41 @@
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        order: 2;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 1rem;
+
+        &>span {
+            font-size: 0.8rem;
+            color: var(--muted-foreground);
+            font-weight: 600;
+        }
+
+        .switch {
+            width: 100%;
+
+            &>span {
+                color: #fff;
+                font-size: 0.8rem;
+            }
+
+            button {
+                margin-left: auto;
+            }
+        }
+
+        .authButtons {
+            flex-direction: column;
+            width: 100%;
+
+            li a {
+                width: 100%;
+                text-align: center;
+                border-radius: 0.5rem;
+            }
+        }
+    }
 }
