@@ -23,25 +23,27 @@ interface NavProps {
 export function Nav({ mobile = false }: NavProps) {
     const { user } = useAuthValue();
 
+    const filteredLinks = links.filter(({ onlyAuth }) => {
+        if (onlyAuth === true && !user) return false;
+        if (onlyAuth === false && user) return false;
+        return true;
+    });
+
     return (
         <nav className={styles.container}>
             {mobile && <span>Navegação</span>}
             <ul className={`${styles.nav}`}>
-                {links.map(({ url, label, onlyAuth = false }) => {
-                    if ((onlyAuth === true && !user) || (onlyAuth === false && user)) return null;
-
-                    return (
-                        <li key={label} className={styles.item}>
-                            <NavLink
-                                to={url}
-                                className={({ isActive }) => `${styles.button} ${isActive ? styles.active : ""}`}
-                            >
-                                {label}
-                                <div className={styles.underlineEffect} />
-                            </NavLink>
-                        </li>
-                    );
-                })}
+                {filteredLinks.map(({ url, label }) => (
+                    <li key={label} className={styles.item}>
+                        <NavLink
+                            to={url}
+                            className={({ isActive }) => `${styles.button} ${isActive ? styles.active : ""}`}
+                        >
+                            {label}
+                            <div className={styles.underlineEffect} />
+                        </NavLink>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

@@ -3,136 +3,25 @@
     align-items: center;
     gap: 1rem;
 
-    .switch {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        background: #2a251f7f;
-        border-radius: 1rem;
-        padding: 0.5rem 0.5rem;
-
-        svg {
-            height: 1rem;
-            width: 1rem;
-        }
-
-        svg:nth-of-type(1) {
-            color: var(--warm-orange);
-        }
-
-        svg:nth-of-type(2) {
-            color: var(--earth-brown);
-        }
-
-        .wrapper {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            height: 1.15rem;
-            width: 2.5rem;
-            border-radius: 9999px;
-            border: 1px solid transparent;
-            transition: all 0.2s ease;
-            outline: none;
-            cursor: pointer;
-        }
-
-        .on {
-            background: var(--earth-brown);
-
-            .circle {
-                background: var(--primary);
-                transform: translateX(calc(145% - 2px));
-            }
-        }
-
-        .off {
-            background: #cbced4;
-
-            .circle {
-                transform: translateX(0);
-                background: var(--primary);
-            }
-        }
-
-        .circle {
-            position: absolute;
-            width: 1rem;
-            height: 1rem;
-            border-radius: 9999px;
-            transition: transform 0.2s ease;
-            background: var(--card, white);
-            pointer-events: none;
-        }
-    }
-
-    .authButtons,
     .loggedButtons {
         list-style: none;
         display: flex;
 
         li {
             display: flex;
-
-            a,
-            .user {
-                padding: 0.5rem;
-                font-weight: 600;
-                border-radius: 2rem;
-                transition: all 0.2s ease;
-                cursor: pointer;
-            }
-        }
-    }
-
-    .authButtons {
-        gap: 0.5rem;
-
-        li a {
-            font-size: 0.775rem;
-            gap: 0.375rem;
         }
 
-        .login {
-            a {
-                background: var(--background);
-                color: var(--secondary);
-                border: 1px solid #d4a57433;
-
-                &:hover {
-                    background: #404041;
-                }
-
-                [data-theme="dark"] & {
-                    &:hover {
-                        background: rgba(255, 255, 255, 0.08);
-                    }
-                }
-            }
-        }
-
-        .register {
-            a {
-                color: var(--secondary);
-                background: var(--warm-orange);
-                border: none;
-                transition: background 0.4s ease;
-
-                &:hover {
-                    background: var(--earth-brown);
-                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-                }
-            }
-        }
-    }
-
-    .loggedButtons {
         .user {
             background: transparent;
             border: 1px solid #d4a57433;
             color: var(--secondary);
             display: flex;
             align-items: center;
+            padding: 0.5rem;
+            font-weight: 600;
+            border-radius: 2rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
 
             span {
                 display: flex;
@@ -167,30 +56,6 @@
             font-size: 0.8rem;
             color: var(--muted-foreground);
             font-weight: 600;
-        }
-
-        .switch {
-            width: 100%;
-
-            &>span {
-                color: #fff;
-                font-size: 0.8rem;
-            }
-
-            button {
-                margin-left: auto;
-            }
-        }
-
-        .authButtons {
-            flex-direction: column;
-            width: 100%;
-
-            li a {
-                width: 100%;
-                text-align: center;
-                border-radius: 0.5rem;
-            }
         }
     }
 }

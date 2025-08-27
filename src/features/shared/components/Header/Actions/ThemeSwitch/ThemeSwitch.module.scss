@@ -1,0 +1,75 @@
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #2a251f7f;
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem;
+
+    svg {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    svg:nth-of-type(1) {
+        color: var(--warm-orange);
+    }
+
+    svg:nth-of-type(2) {
+        color: var(--earth-brown);
+    }
+
+    .wrapper {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        height: 1.15rem;
+        width: 2.5rem;
+        border-radius: 9999px;
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .on {
+        background: var(--earth-brown);
+
+        .circle {
+            background: var(--primary);
+            transform: translateX(calc(145% - 2px));
+        }
+    }
+
+    .off {
+        background: #cbced4;
+
+        .circle {
+            transform: translateX(0);
+            background: var(--primary);
+        }
+    }
+
+    .circle {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 9999px;
+        transition: transform 0.2s ease;
+        background: var(--card, white);
+        pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+
+        &>span {
+            color: #fff;
+            font-size: 0.8rem;
+        }
+
+        button {
+            margin-left: auto;
+        }
+    }
+}

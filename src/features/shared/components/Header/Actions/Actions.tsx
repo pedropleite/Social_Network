@@ -1,13 +1,12 @@
 import styles from "./Actions.module.scss";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useAuthValue } from "../../../../auth/hooks/useAuthValue";
-import { NavLink } from "react-router";
-import { UserDropdown } from "./UserDropdown/UserDropdown";
-
-import { SunIcon } from "../../Icons/SunIcon";
-import { MoonIcon } from "../../Icons/MoonIcon";
 import { UserIcon } from "../../Icons/UserIcon";
+
+import { UserDropdown } from "./UserDropdown/UserDropdown";
+import { AuthButtons } from "./AuthButtons/AuthButtons";
+import { ThemeSwitch } from "./ThemeSwitch/ThemeSwitch";
 
 interface ActionsProps {
     mobile?: boolean;
@@ -16,65 +15,28 @@ interface ActionsProps {
 export function Actions({ mobile = false }: ActionsProps) {
     const { user } = useAuthValue();
 
-    const themeLocalStorage = localStorage.getItem("theme") === "dark";
-    const [isOn, setIsOn] = useState(themeLocalStorage);
     const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        const theme = isOn ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-    }, [isOn]);
-
     const userName = user?.displayName;
-    let userNameFirstLetter;
-    let userEmail;
-
-    if (userName) {
-        userNameFirstLetter = userName.split(" ")[0][0].toUpperCase();
-        userEmail = user.email;
-    }
+    const userNameFirstLetter = user?.displayName?.split(" ")[0][0].toUpperCase() ?? "";
+    const userEmail = user?.email ?? "";
 
     return (
         <>
             <div className={styles.actions}>
-                {mobile && <span>Preferências</span>}
-                <div className={styles.switch}>
-                    <SunIcon />
-                    {mobile && <span>Tema</span>}
-                    <button
-                        type="button"
-                        role="switch"
-                        onClick={() => setIsOn((prev) => !prev)}
-                        className={`${styles.wrapper} ${isOn ? styles.on : styles.off}`}
-                    >
-                        <div className={`${styles.circle}`} />
-                    </button>
-                    <MoonIcon />
-                </div>
+                <ThemeSwitch mobile={mobile} />
 
-                {!user && (
-                    <ul className={styles.authButtons}>
-                        <li className={styles.login}>
-                            <NavLink to={"/login"}>Entrar</NavLink>
-                        </li>
-                        <li className={styles.register}>
-                            <NavLink to={"/register"}>Cadastrar</NavLink>
-                        </li>
-                    </ul>
-                )}
+                {!user && <AuthButtons />}
 
                 {user && !mobile && (
-                    <>
-                        <ul className={styles.loggedButtons}>
-                            <li>
-                                <button className={styles.user} onClick={() => setIsOpen((prev) => !prev)}>
-                                    <span>{userNameFirstLetter}</span>
-                                    <UserIcon />
-                                </button>
-                            </li>
-                        </ul>
-                    </>
+                    <ul className={styles.loggedButtons}>
+                        <li>
+                            <button className={styles.user} onClick={() => setIsOpen((prev) => !prev)}>
+                                <span>{userNameFirstLetter}</span>
+                                <UserIcon />
+                            </button>
+                        </li>
+                    </ul>
                 )}
             </div>
             {user && <UserDropdown name={userName ?? ""} email={userEmail ?? ""} isOpen={isOpen} mobile={mobile} />}

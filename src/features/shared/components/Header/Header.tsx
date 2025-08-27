@@ -4,7 +4,9 @@ import { Nav } from "./Nav/Nav";
 import { Logo } from "./Logo/Logo";
 import { Actions } from "./Actions/Actions";
 import { Menu } from "./Menu/Menu";
+
 import { useIsDesktop } from "../../hooks/useMediaQuesry";
+
 import { useState } from "react";
 import { MenuIcon } from "../Icons/MenuIcon";
 
@@ -23,7 +25,12 @@ export function Header() {
                     </>
                 ) : (
                     <>
-                        <button className={styles.menuButton} onClick={() => setMenuOpen(true)} aria-label="Abrir menu">
+                        <button
+                            className={styles.menuButton}
+                            onClick={() => setMenuOpen(true)}
+                            aria-label="Abrir menu"
+                            aria-expanded={menuOpen}
+                        >
                             <MenuIcon />
                         </button>
 

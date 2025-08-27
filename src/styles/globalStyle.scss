@@ -48,10 +48,6 @@ a {
     border-radius: 5px;
 }
 
-.borderDefault {
-    border: 1px solid #d4a57430;
-
-    &.order-2 {
-        order: 2;
-    }
+.order-2 {
+    order: 2;
 }
