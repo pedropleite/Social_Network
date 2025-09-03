@@ -1,3 +1,5 @@
+import styles from "./ExplorePage.module.scss";
+
 import { Link, useSearchParams } from "react-router";
 import { usePosts } from "../../hooks/usePosts";
 import React, { useRef } from "react";
@@ -6,9 +8,7 @@ import { LoadingLoop } from "../../../shared/components/LoadingLoop/LoadingLoop"
 import { SearchIcon } from "../../../shared/components/Icons/SearchIcon";
 import { CardPost } from "../../components/CardPost/CardPost";
 
-import styles from "./HomePage.module.scss";
-
-export function HomePage() {
+export function ExplorePage() {
     const [searchParams, setSearchParams] = useSearchParams();
     const search = searchParams.get("search") || null;
     const searchInput = useRef<HTMLInputElement>(null);

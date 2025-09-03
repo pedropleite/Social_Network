@@ -1,4 +1,4 @@
-import formSignImg2 from "../../../../assets/signUp.jpg";
+import formSignImg2 from "../../../../assets/image/ilustration/formSignUp2.jpg";
 import { Input } from "../../components/Input/Input";
 import { useAuthentication } from "../../hooks/useAuthentication";
 import { useForm, type SubmitHandler } from "react-hook-form";

@@ -35,7 +35,7 @@ a {
 }
 
 @mixin containerDefault {
-    max-width: 80rem;
+    max-width: var(--width-container);
     width: 100%;
 }
 

@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 
 import App from "./App";
 import { RouteWrapper } from "./features/auth/components/RouteWrapper/RouteWrapper";
-import { HomePage } from "./features/posts/pages/HomePage/HomePage";
+import { ExplorePage } from "./features/posts/pages/ExplorePage/ExplorePage";
 import { AboutPage } from "./features/about/pages/AboutPage";
 import { LoginPage } from "./features/auth/pages/LoginPage/LoginPage";
 import { RegisterPage } from "./features/auth/pages/RegisterPage/RegisterPage";
@@ -18,7 +18,7 @@ export const routes = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <HomePage />,
+                element: <ExplorePage />,
             },
             {
                 path: "about",

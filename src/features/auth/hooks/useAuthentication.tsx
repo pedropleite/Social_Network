@@ -4,12 +4,15 @@ import {
     signInWithEmailAndPassword,
     updateProfile,
     signOut,
+    type User,
 } from "firebase/auth";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
+import { db } from "../../../firebase/config";
 
 import { useAsyncStatus } from "../../shared/hooks/useAsyncStatus";
 import { useNavigate } from "react-router";
 
-interface userType {
+interface UserType {
     displayName?: string;
     email: string;
     password: string;
@@ -40,12 +43,29 @@ export function useAuthentication() {
         setErrorMessage("Something went wrong");
     }
 
-    async function createUser({ email, password, displayName }: userType) {
+    async function createUserDoc(user: User, displayName?: string) {
+        const userRef = doc(db, "users", user.uid);
+        const snap = await getDoc(userRef);
+
+        if (!snap.exists()) {
+            await setDoc(userRef, {
+                uid: user.uid,
+                displayName: displayName,
+                email: user.email,
+                photoURL: "",
+                createdAt: serverTimestamp(),
+                updatedAt: serverTimestamp(),
+            });
+        }
+    }
+
+    async function createUser({ email, password, displayName }: UserType) {
         setLoading();
 
         try {
             const { user } = await createUserWithEmailAndPassword(auth, email, password);
             await updateProfile(user, { displayName: displayName });
+            await createUserDoc(user, displayName);
 
             navigate("/");
         } catch (error: unknown) {
@@ -60,11 +80,14 @@ export function useAuthentication() {
         navigate("/");
     }
 
-    async function login({ email, password }: userType) {
+    async function login({ email, password }: UserType) {
         setLoading();
 
         try {
-            await signInWithEmailAndPassword(auth, email, password);
+            const { user } = await signInWithEmailAndPassword(auth, email, password);
+
+            await createUserDoc(user, user.displayName!);
+
             navigate("/");
         } catch (error: unknown) {
             handleError(error);
