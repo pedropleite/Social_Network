@@ -7,7 +7,7 @@ import {
     type User,
 } from "firebase/auth";
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
-import { db } from "../../../firebase/config";
+import { db } from "../../../supabase/config";
 
 import { useAsyncStatus } from "../../shared/hooks/useAsyncStatus";
 import { useNavigate } from "react-router";

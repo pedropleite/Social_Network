@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { collection, query, onSnapshot, orderBy, where, QueryConstraint } from "firebase/firestore";
-import { db } from "../../../firebase/config";
+import { db } from "../../../supabase/config";
 import type { Post } from "../types/Post";
 import { mapDocToPost } from "../utils/mapDocToPost";
 import { useAsyncStatus } from "../../shared/hooks/useAsyncStatus";

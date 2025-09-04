@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { db } from "../../../firebase/config";
+import { db } from "../../../supabase/config";
 import { doc, getDoc } from "firebase/firestore";
 import type { Post } from "../types/Post";
 import { mapDocToPost } from "../utils/mapDocToPost";

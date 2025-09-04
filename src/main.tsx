@@ -2,7 +2,7 @@ import "./styles/globalStyle.scss";
 import "./styles/themes.scss";
 import "./styles/variables.scss";
 
-import "./firebase/config.tsx";
+import "./supabase/config.tsx";
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";

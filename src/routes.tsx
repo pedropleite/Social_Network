@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 
 import App from "./App";
+
 import { RouteWrapper } from "./features/auth/components/RouteWrapper/RouteWrapper";
 import { ExplorePage } from "./features/posts/pages/ExplorePage/ExplorePage";
 import { AboutPage } from "./features/about/pages/AboutPage";
